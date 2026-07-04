@@ -1,0 +1,2802 @@
+[
+ {
+  "customer_id": "CUST00001",
+  "persona": "self_employed",
+  "true_monthly_income": 45252.26,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00002",
+  "persona": "gig_worker",
+  "true_monthly_income": 39282.37,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00003",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 49272.69,
+  "applied_within_90d": 1,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00004",
+  "persona": "self_employed",
+  "true_monthly_income": 59097.75,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00005",
+  "persona": "self_employed",
+  "true_monthly_income": 102063.83,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00006",
+  "persona": "salaried_stable",
+  "true_monthly_income": 148205.3,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00007",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 62414.24,
+  "applied_within_90d": 1,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00008",
+  "persona": "gig_worker",
+  "true_monthly_income": 27185.53,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00009",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 44807.03,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00010",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 42672.96,
+  "applied_within_90d": 1,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00011",
+  "persona": "affluent",
+  "true_monthly_income": 174312.43,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00012",
+  "persona": "gig_worker",
+  "true_monthly_income": 36998.73,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00013",
+  "persona": "self_employed",
+  "true_monthly_income": 135549.61,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00014",
+  "persona": "self_employed",
+  "true_monthly_income": 242243.63,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00015",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 52811.71,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00016",
+  "persona": "salaried_stable",
+  "true_monthly_income": 137399.08,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00017",
+  "persona": "salaried_stable",
+  "true_monthly_income": 73607.84,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00018",
+  "persona": "salaried_stable",
+  "true_monthly_income": 74357.56,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00019",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 49878.46,
+  "applied_within_90d": 1,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00020",
+  "persona": "salaried_stable",
+  "true_monthly_income": 59737.07,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00021",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 64672.77,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00022",
+  "persona": "self_employed",
+  "true_monthly_income": 140936.93,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00023",
+  "persona": "salaried_stable",
+  "true_monthly_income": 130675.14,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00024",
+  "persona": "affluent",
+  "true_monthly_income": 573316.81,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00025",
+  "persona": "salaried_stable",
+  "true_monthly_income": 103450.86,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00026",
+  "persona": "salaried_stable",
+  "true_monthly_income": 81083.4,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00027",
+  "persona": "self_employed",
+  "true_monthly_income": 159829.59,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00028",
+  "persona": "salaried_stable",
+  "true_monthly_income": 160918.68,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00029",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 54403.91,
+  "applied_within_90d": 0,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00030",
+  "persona": "self_employed",
+  "true_monthly_income": 147918.71,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00031",
+  "persona": "salaried_stable",
+  "true_monthly_income": 134764.67,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00032",
+  "persona": "affluent",
+  "true_monthly_income": 441428.32,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00033",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 38266.25,
+  "applied_within_90d": 0,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00034",
+  "persona": "affluent",
+  "true_monthly_income": 201540.5,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00035",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 72551.24,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00036",
+  "persona": "salaried_stable",
+  "true_monthly_income": 161609.55,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00037",
+  "persona": "gig_worker",
+  "true_monthly_income": 38343.83,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00038",
+  "persona": "salaried_stable",
+  "true_monthly_income": 45960.44,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00039",
+  "persona": "affluent",
+  "true_monthly_income": 334598.29,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00040",
+  "persona": "gig_worker",
+  "true_monthly_income": 53668.32,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00041",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 81500.88,
+  "applied_within_90d": 1,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00042",
+  "persona": "salaried_stable",
+  "true_monthly_income": 126652.35,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00043",
+  "persona": "salaried_stable",
+  "true_monthly_income": 139420.53,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00044",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 47142.17,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00045",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 57145.19,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00046",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 47527.9,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00047",
+  "persona": "gig_worker",
+  "true_monthly_income": 18553.01,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00048",
+  "persona": "salaried_stable",
+  "true_monthly_income": 76653.69,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00049",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 31210.66,
+  "applied_within_90d": 1,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00050",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 47751.21,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00051",
+  "persona": "affluent",
+  "true_monthly_income": 422454.08,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00052",
+  "persona": "affluent",
+  "true_monthly_income": 255011.3,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00053",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 37970.36,
+  "applied_within_90d": 1,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00054",
+  "persona": "affluent",
+  "true_monthly_income": 491680.22,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00055",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 67744.28,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00056",
+  "persona": "affluent",
+  "true_monthly_income": 463833.41,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00057",
+  "persona": "salaried_stable",
+  "true_monthly_income": 136180.69,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00058",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 89317.83,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00059",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 81856.35,
+  "applied_within_90d": 1,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00060",
+  "persona": "self_employed",
+  "true_monthly_income": 78844.55,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00061",
+  "persona": "self_employed",
+  "true_monthly_income": 102116.4,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00062",
+  "persona": "self_employed",
+  "true_monthly_income": 222125.62,
+  "applied_within_90d": 1,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00063",
+  "persona": "gig_worker",
+  "true_monthly_income": 37824.01,
+  "applied_within_90d": 0,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00064",
+  "persona": "salaried_stable",
+  "true_monthly_income": 91866.77,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00065",
+  "persona": "self_employed",
+  "true_monthly_income": 132241.41,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00066",
+  "persona": "salaried_stable",
+  "true_monthly_income": 176998.0,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00067",
+  "persona": "self_employed",
+  "true_monthly_income": 107867.23,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00068",
+  "persona": "salaried_stable",
+  "true_monthly_income": 173369.34,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00069",
+  "persona": "salaried_stable",
+  "true_monthly_income": 121143.84,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00070",
+  "persona": "self_employed",
+  "true_monthly_income": 127618.43,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00071",
+  "persona": "self_employed",
+  "true_monthly_income": 74870.95,
+  "applied_within_90d": 0,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00072",
+  "persona": "gig_worker",
+  "true_monthly_income": 25936.67,
+  "applied_within_90d": 1,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00073",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 65170.41,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00074",
+  "persona": "gig_worker",
+  "true_monthly_income": 50440.95,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00075",
+  "persona": "gig_worker",
+  "true_monthly_income": 26960.73,
+  "applied_within_90d": 0,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00076",
+  "persona": "salaried_stable",
+  "true_monthly_income": 98130.4,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00077",
+  "persona": "gig_worker",
+  "true_monthly_income": 24119.66,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00078",
+  "persona": "salaried_stable",
+  "true_monthly_income": 127504.76,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00079",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 40758.32,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00080",
+  "persona": "salaried_stable",
+  "true_monthly_income": 129190.17,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00081",
+  "persona": "self_employed",
+  "true_monthly_income": 210128.55,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00082",
+  "persona": "gig_worker",
+  "true_monthly_income": 47517.21,
+  "applied_within_90d": 1,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00083",
+  "persona": "self_employed",
+  "true_monthly_income": 86173.76,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00084",
+  "persona": "salaried_stable",
+  "true_monthly_income": 150353.63,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00085",
+  "persona": "salaried_stable",
+  "true_monthly_income": 134409.53,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00086",
+  "persona": "gig_worker",
+  "true_monthly_income": 38302.08,
+  "applied_within_90d": 0,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00087",
+  "persona": "self_employed",
+  "true_monthly_income": 79188.19,
+  "applied_within_90d": 1,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00088",
+  "persona": "salaried_stable",
+  "true_monthly_income": 122062.88,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00089",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 74632.25,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00090",
+  "persona": "salaried_stable",
+  "true_monthly_income": 60863.74,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00091",
+  "persona": "self_employed",
+  "true_monthly_income": 194448.95,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00092",
+  "persona": "salaried_stable",
+  "true_monthly_income": 47190.25,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00093",
+  "persona": "affluent",
+  "true_monthly_income": 478941.77,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00094",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 48683.61,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00095",
+  "persona": "self_employed",
+  "true_monthly_income": 73144.74,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00096",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 84281.64,
+  "applied_within_90d": 0,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00097",
+  "persona": "gig_worker",
+  "true_monthly_income": 40751.08,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00098",
+  "persona": "salaried_stable",
+  "true_monthly_income": 51402.26,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00099",
+  "persona": "salaried_stable",
+  "true_monthly_income": 50138.2,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00100",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 43162.44,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00101",
+  "persona": "gig_worker",
+  "true_monthly_income": 46051.67,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00102",
+  "persona": "self_employed",
+  "true_monthly_income": 225383.39,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00103",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 58903.34,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00104",
+  "persona": "gig_worker",
+  "true_monthly_income": 28736.15,
+  "applied_within_90d": 0,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00105",
+  "persona": "self_employed",
+  "true_monthly_income": 224888.37,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00106",
+  "persona": "salaried_stable",
+  "true_monthly_income": 103407.34,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00107",
+  "persona": "gig_worker",
+  "true_monthly_income": 47769.29,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00108",
+  "persona": "gig_worker",
+  "true_monthly_income": 36264.0,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00109",
+  "persona": "salaried_stable",
+  "true_monthly_income": 85948.94,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00110",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 43872.91,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00111",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 35889.27,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00112",
+  "persona": "salaried_stable",
+  "true_monthly_income": 86322.68,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00113",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 40868.95,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00114",
+  "persona": "salaried_stable",
+  "true_monthly_income": 161781.71,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00115",
+  "persona": "self_employed",
+  "true_monthly_income": 104877.04,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00116",
+  "persona": "salaried_stable",
+  "true_monthly_income": 177230.77,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00117",
+  "persona": "salaried_stable",
+  "true_monthly_income": 111795.94,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00118",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 62585.3,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00119",
+  "persona": "salaried_stable",
+  "true_monthly_income": 136305.82,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00120",
+  "persona": "salaried_stable",
+  "true_monthly_income": 72718.43,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00121",
+  "persona": "self_employed",
+  "true_monthly_income": 217299.79,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00122",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 79306.99,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00123",
+  "persona": "salaried_stable",
+  "true_monthly_income": 99170.77,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00124",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 37479.46,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00125",
+  "persona": "self_employed",
+  "true_monthly_income": 150536.07,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00126",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 32226.1,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00127",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 31771.45,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00128",
+  "persona": "gig_worker",
+  "true_monthly_income": 39821.27,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00129",
+  "persona": "affluent",
+  "true_monthly_income": 346411.47,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00130",
+  "persona": "affluent",
+  "true_monthly_income": 265953.08,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00131",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 43476.33,
+  "applied_within_90d": 1,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00132",
+  "persona": "gig_worker",
+  "true_monthly_income": 24811.05,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00133",
+  "persona": "gig_worker",
+  "true_monthly_income": 35212.3,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00134",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 59247.19,
+  "applied_within_90d": 0,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00135",
+  "persona": "gig_worker",
+  "true_monthly_income": 38191.9,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00136",
+  "persona": "self_employed",
+  "true_monthly_income": 109617.35,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00137",
+  "persona": "salaried_stable",
+  "true_monthly_income": 79052.81,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00138",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 54815.82,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00139",
+  "persona": "affluent",
+  "true_monthly_income": 460051.96,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00140",
+  "persona": "gig_worker",
+  "true_monthly_income": 40752.53,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00141",
+  "persona": "salaried_stable",
+  "true_monthly_income": 94544.37,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00142",
+  "persona": "self_employed",
+  "true_monthly_income": 107886.65,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00143",
+  "persona": "salaried_stable",
+  "true_monthly_income": 162291.59,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00144",
+  "persona": "gig_worker",
+  "true_monthly_income": 20688.23,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00145",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 32043.36,
+  "applied_within_90d": 1,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00146",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 50911.9,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00147",
+  "persona": "gig_worker",
+  "true_monthly_income": 41808.87,
+  "applied_within_90d": 0,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00148",
+  "persona": "salaried_stable",
+  "true_monthly_income": 129111.14,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00149",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 89623.4,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00150",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 56683.78,
+  "applied_within_90d": 1,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00151",
+  "persona": "gig_worker",
+  "true_monthly_income": 52432.08,
+  "applied_within_90d": 1,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00152",
+  "persona": "self_employed",
+  "true_monthly_income": 105273.88,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00153",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 35883.98,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00154",
+  "persona": "salaried_stable",
+  "true_monthly_income": 179411.56,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00155",
+  "persona": "salaried_stable",
+  "true_monthly_income": 75001.27,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00156",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 40855.04,
+  "applied_within_90d": 1,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00157",
+  "persona": "salaried_stable",
+  "true_monthly_income": 59024.4,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00158",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 41202.36,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00159",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 42318.12,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00160",
+  "persona": "salaried_stable",
+  "true_monthly_income": 59127.48,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00161",
+  "persona": "salaried_stable",
+  "true_monthly_income": 78380.8,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00162",
+  "persona": "self_employed",
+  "true_monthly_income": 243387.49,
+  "applied_within_90d": 0,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00163",
+  "persona": "gig_worker",
+  "true_monthly_income": 28096.21,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00164",
+  "persona": "self_employed",
+  "true_monthly_income": 48356.51,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00165",
+  "persona": "self_employed",
+  "true_monthly_income": 160679.77,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00166",
+  "persona": "salaried_stable",
+  "true_monthly_income": 76326.96,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00167",
+  "persona": "self_employed",
+  "true_monthly_income": 105780.59,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00168",
+  "persona": "salaried_stable",
+  "true_monthly_income": 53818.34,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00169",
+  "persona": "salaried_stable",
+  "true_monthly_income": 134943.74,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00170",
+  "persona": "affluent",
+  "true_monthly_income": 274667.99,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00171",
+  "persona": "affluent",
+  "true_monthly_income": 402057.05,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00172",
+  "persona": "salaried_stable",
+  "true_monthly_income": 167984.66,
+  "applied_within_90d": 0,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00173",
+  "persona": "self_employed",
+  "true_monthly_income": 101419.84,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00174",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 62521.75,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00175",
+  "persona": "salaried_stable",
+  "true_monthly_income": 86692.62,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00176",
+  "persona": "salaried_stable",
+  "true_monthly_income": 85200.51,
+  "applied_within_90d": 1,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00177",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 54039.95,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00178",
+  "persona": "self_employed",
+  "true_monthly_income": 104539.87,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00179",
+  "persona": "salaried_stable",
+  "true_monthly_income": 74394.05,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00180",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 53022.92,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00181",
+  "persona": "salaried_stable",
+  "true_monthly_income": 168446.29,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00182",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 37470.75,
+  "applied_within_90d": 0,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00183",
+  "persona": "salaried_stable",
+  "true_monthly_income": 61973.67,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00184",
+  "persona": "salaried_stable",
+  "true_monthly_income": 161091.13,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00185",
+  "persona": "salaried_stable",
+  "true_monthly_income": 69091.44,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00186",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 34419.18,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00187",
+  "persona": "self_employed",
+  "true_monthly_income": 117229.39,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00188",
+  "persona": "salaried_stable",
+  "true_monthly_income": 164662.33,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00189",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 89639.76,
+  "applied_within_90d": 1,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00190",
+  "persona": "self_employed",
+  "true_monthly_income": 87605.36,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00191",
+  "persona": "salaried_stable",
+  "true_monthly_income": 179163.15,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00192",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 39858.04,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00193",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 55344.41,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00194",
+  "persona": "self_employed",
+  "true_monthly_income": 109178.24,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00195",
+  "persona": "gig_worker",
+  "true_monthly_income": 43779.24,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00196",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 61789.61,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00197",
+  "persona": "self_employed",
+  "true_monthly_income": 222962.94,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00198",
+  "persona": "self_employed",
+  "true_monthly_income": 135371.51,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00199",
+  "persona": "gig_worker",
+  "true_monthly_income": 32804.27,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00200",
+  "persona": "salaried_stable",
+  "true_monthly_income": 125418.29,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00201",
+  "persona": "salaried_stable",
+  "true_monthly_income": 128402.0,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00202",
+  "persona": "affluent",
+  "true_monthly_income": 473577.79,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00203",
+  "persona": "gig_worker",
+  "true_monthly_income": 22042.54,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00204",
+  "persona": "affluent",
+  "true_monthly_income": 182457.78,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00205",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 62442.64,
+  "applied_within_90d": 1,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00206",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 46900.66,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00207",
+  "persona": "salaried_stable",
+  "true_monthly_income": 98628.12,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00208",
+  "persona": "self_employed",
+  "true_monthly_income": 168640.04,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00209",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 88344.58,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00210",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 55156.66,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00211",
+  "persona": "salaried_stable",
+  "true_monthly_income": 103244.55,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00212",
+  "persona": "salaried_stable",
+  "true_monthly_income": 115278.62,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00213",
+  "persona": "gig_worker",
+  "true_monthly_income": 20435.63,
+  "applied_within_90d": 1,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00214",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 85118.95,
+  "applied_within_90d": 0,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00215",
+  "persona": "salaried_stable",
+  "true_monthly_income": 53676.98,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00216",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 83153.61,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00217",
+  "persona": "salaried_stable",
+  "true_monthly_income": 119343.34,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00218",
+  "persona": "self_employed",
+  "true_monthly_income": 150030.35,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00219",
+  "persona": "salaried_stable",
+  "true_monthly_income": 72075.72,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00220",
+  "persona": "gig_worker",
+  "true_monthly_income": 34761.45,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00221",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 48960.32,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00222",
+  "persona": "salaried_stable",
+  "true_monthly_income": 45720.29,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00223",
+  "persona": "self_employed",
+  "true_monthly_income": 241593.81,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00224",
+  "persona": "self_employed",
+  "true_monthly_income": 80733.61,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00225",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 76773.93,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00226",
+  "persona": "self_employed",
+  "true_monthly_income": 246333.19,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00227",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 62435.47,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00228",
+  "persona": "gig_worker",
+  "true_monthly_income": 35115.42,
+  "applied_within_90d": 0,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00229",
+  "persona": "salaried_stable",
+  "true_monthly_income": 78394.05,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00230",
+  "persona": "salaried_stable",
+  "true_monthly_income": 138243.72,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00231",
+  "persona": "salaried_stable",
+  "true_monthly_income": 140549.94,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00232",
+  "persona": "self_employed",
+  "true_monthly_income": 150538.03,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00233",
+  "persona": "salaried_stable",
+  "true_monthly_income": 162259.39,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00234",
+  "persona": "affluent",
+  "true_monthly_income": 370944.01,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00235",
+  "persona": "affluent",
+  "true_monthly_income": 183211.2,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00236",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 33591.57,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00237",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 76672.61,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00238",
+  "persona": "self_employed",
+  "true_monthly_income": 228927.99,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00239",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 84186.02,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00240",
+  "persona": "salaried_stable",
+  "true_monthly_income": 53499.6,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00241",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 68092.58,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00242",
+  "persona": "self_employed",
+  "true_monthly_income": 223875.53,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00243",
+  "persona": "salaried_stable",
+  "true_monthly_income": 120694.42,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00244",
+  "persona": "salaried_stable",
+  "true_monthly_income": 133428.08,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00245",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 36952.29,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00246",
+  "persona": "affluent",
+  "true_monthly_income": 409434.83,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00247",
+  "persona": "gig_worker",
+  "true_monthly_income": 29631.36,
+  "applied_within_90d": 0,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00248",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 76914.33,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00249",
+  "persona": "self_employed",
+  "true_monthly_income": 118087.9,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00250",
+  "persona": "self_employed",
+  "true_monthly_income": 92100.51,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00251",
+  "persona": "salaried_stable",
+  "true_monthly_income": 98551.19,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00252",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 33996.93,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00253",
+  "persona": "salaried_stable",
+  "true_monthly_income": 101435.75,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00254",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 51770.01,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00255",
+  "persona": "self_employed",
+  "true_monthly_income": 223474.29,
+  "applied_within_90d": 0,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00256",
+  "persona": "gig_worker",
+  "true_monthly_income": 43775.43,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00257",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 75123.85,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00258",
+  "persona": "salaried_stable",
+  "true_monthly_income": 70905.91,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00259",
+  "persona": "gig_worker",
+  "true_monthly_income": 24755.94,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00260",
+  "persona": "affluent",
+  "true_monthly_income": 433319.21,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00261",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 67343.65,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00262",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 68021.08,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00263",
+  "persona": "affluent",
+  "true_monthly_income": 316270.35,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00264",
+  "persona": "salaried_stable",
+  "true_monthly_income": 67510.3,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00265",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 70024.36,
+  "applied_within_90d": 1,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00266",
+  "persona": "affluent",
+  "true_monthly_income": 155724.2,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00267",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 47512.41,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00268",
+  "persona": "affluent",
+  "true_monthly_income": 523650.29,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00269",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 72808.98,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00270",
+  "persona": "affluent",
+  "true_monthly_income": 314885.76,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00271",
+  "persona": "gig_worker",
+  "true_monthly_income": 47943.51,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00272",
+  "persona": "salaried_stable",
+  "true_monthly_income": 107544.65,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00273",
+  "persona": "salaried_stable",
+  "true_monthly_income": 164624.89,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00274",
+  "persona": "salaried_stable",
+  "true_monthly_income": 60353.27,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00275",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 89107.5,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00276",
+  "persona": "affluent",
+  "true_monthly_income": 265364.91,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00277",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 30708.85,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00278",
+  "persona": "self_employed",
+  "true_monthly_income": 50597.74,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00279",
+  "persona": "self_employed",
+  "true_monthly_income": 155473.39,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00280",
+  "persona": "affluent",
+  "true_monthly_income": 389970.27,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00281",
+  "persona": "salaried_stable",
+  "true_monthly_income": 127251.88,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00282",
+  "persona": "gig_worker",
+  "true_monthly_income": 34544.42,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00283",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 87808.06,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00284",
+  "persona": "salaried_stable",
+  "true_monthly_income": 104270.26,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00285",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 87887.63,
+  "applied_within_90d": 1,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00286",
+  "persona": "self_employed",
+  "true_monthly_income": 82406.46,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00287",
+  "persona": "self_employed",
+  "true_monthly_income": 133559.74,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00288",
+  "persona": "salaried_stable",
+  "true_monthly_income": 72651.91,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00289",
+  "persona": "affluent",
+  "true_monthly_income": 248219.26,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00290",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 70178.94,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00291",
+  "persona": "salaried_stable",
+  "true_monthly_income": 167592.69,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00292",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 50223.76,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00293",
+  "persona": "self_employed",
+  "true_monthly_income": 153615.85,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00294",
+  "persona": "salaried_stable",
+  "true_monthly_income": 175041.06,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00295",
+  "persona": "salaried_stable",
+  "true_monthly_income": 68308.36,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00296",
+  "persona": "self_employed",
+  "true_monthly_income": 212444.82,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00297",
+  "persona": "self_employed",
+  "true_monthly_income": 167323.64,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00298",
+  "persona": "salaried_stable",
+  "true_monthly_income": 125983.07,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00299",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 50558.28,
+  "applied_within_90d": 1,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00300",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 56402.87,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00301",
+  "persona": "salaried_stable",
+  "true_monthly_income": 47943.72,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00302",
+  "persona": "salaried_stable",
+  "true_monthly_income": 127254.11,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00303",
+  "persona": "salaried_stable",
+  "true_monthly_income": 167788.09,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00304",
+  "persona": "salaried_stable",
+  "true_monthly_income": 141739.38,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00305",
+  "persona": "gig_worker",
+  "true_monthly_income": 20235.92,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00306",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 67180.56,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00307",
+  "persona": "self_employed",
+  "true_monthly_income": 102931.25,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00308",
+  "persona": "salaried_stable",
+  "true_monthly_income": 100938.32,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00309",
+  "persona": "salaried_stable",
+  "true_monthly_income": 114522.47,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00310",
+  "persona": "self_employed",
+  "true_monthly_income": 194942.78,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00311",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 42735.93,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00312",
+  "persona": "affluent",
+  "true_monthly_income": 215752.11,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00313",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 53274.84,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00314",
+  "persona": "gig_worker",
+  "true_monthly_income": 52027.15,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00315",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 71921.71,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00316",
+  "persona": "affluent",
+  "true_monthly_income": 175304.29,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00317",
+  "persona": "gig_worker",
+  "true_monthly_income": 26627.01,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00318",
+  "persona": "salaried_stable",
+  "true_monthly_income": 162486.8,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00319",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 42123.05,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00320",
+  "persona": "salaried_stable",
+  "true_monthly_income": 143885.34,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00321",
+  "persona": "salaried_stable",
+  "true_monthly_income": 72213.05,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00322",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 41314.76,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00323",
+  "persona": "salaried_stable",
+  "true_monthly_income": 125958.65,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00324",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 54290.65,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00325",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 69482.1,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00326",
+  "persona": "salaried_stable",
+  "true_monthly_income": 79546.82,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00327",
+  "persona": "salaried_stable",
+  "true_monthly_income": 86094.57,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00328",
+  "persona": "affluent",
+  "true_monthly_income": 596472.64,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00329",
+  "persona": "self_employed",
+  "true_monthly_income": 49057.31,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00330",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 49871.41,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00331",
+  "persona": "salaried_stable",
+  "true_monthly_income": 178291.34,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00332",
+  "persona": "gig_worker",
+  "true_monthly_income": 54918.78,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00333",
+  "persona": "self_employed",
+  "true_monthly_income": 197998.61,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00334",
+  "persona": "gig_worker",
+  "true_monthly_income": 39796.74,
+  "applied_within_90d": 0,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00335",
+  "persona": "salaried_stable",
+  "true_monthly_income": 60508.33,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00336",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 43112.9,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00337",
+  "persona": "salaried_stable",
+  "true_monthly_income": 94758.07,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00338",
+  "persona": "gig_worker",
+  "true_monthly_income": 50060.61,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00339",
+  "persona": "gig_worker",
+  "true_monthly_income": 53639.87,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00340",
+  "persona": "gig_worker",
+  "true_monthly_income": 21605.37,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00341",
+  "persona": "self_employed",
+  "true_monthly_income": 49477.26,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00342",
+  "persona": "salaried_stable",
+  "true_monthly_income": 110087.68,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00343",
+  "persona": "self_employed",
+  "true_monthly_income": 165629.44,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00344",
+  "persona": "salaried_stable",
+  "true_monthly_income": 98260.37,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00345",
+  "persona": "self_employed",
+  "true_monthly_income": 140037.81,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00346",
+  "persona": "self_employed",
+  "true_monthly_income": 71530.98,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00347",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 48245.5,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00348",
+  "persona": "salaried_stable",
+  "true_monthly_income": 98574.4,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00349",
+  "persona": "self_employed",
+  "true_monthly_income": 47653.94,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00350",
+  "persona": "self_employed",
+  "true_monthly_income": 172707.83,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00351",
+  "persona": "salaried_stable",
+  "true_monthly_income": 174316.83,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00352",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 44371.61,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00353",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 69151.37,
+  "applied_within_90d": 1,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00354",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 67358.07,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00355",
+  "persona": "self_employed",
+  "true_monthly_income": 204145.6,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00356",
+  "persona": "affluent",
+  "true_monthly_income": 333844.48,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00357",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 82240.62,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00358",
+  "persona": "salaried_stable",
+  "true_monthly_income": 146854.96,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00359",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 59011.33,
+  "applied_within_90d": 1,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00360",
+  "persona": "salaried_stable",
+  "true_monthly_income": 179480.56,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00361",
+  "persona": "gig_worker",
+  "true_monthly_income": 31078.25,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00362",
+  "persona": "affluent",
+  "true_monthly_income": 574890.55,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00363",
+  "persona": "self_employed",
+  "true_monthly_income": 92025.39,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00364",
+  "persona": "salaried_stable",
+  "true_monthly_income": 120679.53,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00365",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 35562.36,
+  "applied_within_90d": 1,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00366",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 79310.72,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00367",
+  "persona": "salaried_stable",
+  "true_monthly_income": 136793.97,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00368",
+  "persona": "gig_worker",
+  "true_monthly_income": 20889.94,
+  "applied_within_90d": 0,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00369",
+  "persona": "salaried_stable",
+  "true_monthly_income": 55001.56,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00370",
+  "persona": "salaried_stable",
+  "true_monthly_income": 153171.21,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00371",
+  "persona": "salaried_stable",
+  "true_monthly_income": 127227.84,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00372",
+  "persona": "salaried_stable",
+  "true_monthly_income": 161989.31,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00373",
+  "persona": "gig_worker",
+  "true_monthly_income": 30753.68,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00374",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 36057.72,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00375",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 68793.36,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00376",
+  "persona": "affluent",
+  "true_monthly_income": 235939.86,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00377",
+  "persona": "self_employed",
+  "true_monthly_income": 247379.04,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00378",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 62862.17,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00379",
+  "persona": "salaried_stable",
+  "true_monthly_income": 109422.51,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00380",
+  "persona": "salaried_stable",
+  "true_monthly_income": 65408.48,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00381",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 79646.06,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00382",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 33219.97,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00383",
+  "persona": "salaried_stable",
+  "true_monthly_income": 46578.59,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00384",
+  "persona": "self_employed",
+  "true_monthly_income": 193739.01,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00385",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 55992.32,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00386",
+  "persona": "self_employed",
+  "true_monthly_income": 67088.32,
+  "applied_within_90d": 0,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00387",
+  "persona": "gig_worker",
+  "true_monthly_income": 43403.19,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00388",
+  "persona": "salaried_stable",
+  "true_monthly_income": 57045.66,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00389",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 42147.16,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00390",
+  "persona": "affluent",
+  "true_monthly_income": 462315.98,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00391",
+  "persona": "salaried_stable",
+  "true_monthly_income": 167816.4,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00392",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 79356.87,
+  "applied_within_90d": 1,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00393",
+  "persona": "salaried_stable",
+  "true_monthly_income": 92950.31,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00394",
+  "persona": "gig_worker",
+  "true_monthly_income": 25630.35,
+  "applied_within_90d": 0,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00395",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 57284.22,
+  "applied_within_90d": 1,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00396",
+  "persona": "salaried_stable",
+  "true_monthly_income": 163401.31,
+  "applied_within_90d": 0,
+  "defaulted": 0
+ },
+ {
+  "customer_id": "CUST00397",
+  "persona": "salaried_stretched",
+  "true_monthly_income": 85859.68,
+  "applied_within_90d": 1,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00398",
+  "persona": "gig_worker",
+  "true_monthly_income": 25277.77,
+  "applied_within_90d": 0,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00399",
+  "persona": "gig_worker",
+  "true_monthly_income": 41134.66,
+  "applied_within_90d": 1,
+  "defaulted": 1
+ },
+ {
+  "customer_id": "CUST00400",
+  "persona": "self_employed",
+  "true_monthly_income": 47365.77,
+  "applied_within_90d": 0,
+  "defaulted": 1
+ }
+]

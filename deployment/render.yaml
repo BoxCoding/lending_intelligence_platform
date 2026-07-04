@@ -1,0 +1,16 @@
+# Render blueprint: deploys the FastAPI backend as a Docker web service.
+services:
+  - type: web
+    name: lendiq-api
+    runtime: docker
+    dockerfilePath: docker/Dockerfile.backend
+    dockerContext: .
+    plan: starter
+    healthCheckPath: /
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false          # set in Render dashboard
+      - key: CORS_ORIGINS
+        value: https://lendiq.vercel.app,http://localhost:3000
+      - key: ENVIRONMENT
+        value: production
