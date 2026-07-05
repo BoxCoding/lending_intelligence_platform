@@ -87,7 +87,7 @@
             </a:r>
             <a:r>
               <a:rPr lang="en-GB"/>
-              <a:t>[Add GitHub link]</a:t>
+              <a:t>https://github.com/BoxCoding/lending_intelligence_platform.git</a:t>
             </a:r>
             <a:endParaRPr/>
           </a:p>
@@ -108,7 +108,7 @@
             </a:r>
             <a:r>
               <a:rPr lang="en-GB"/>
-              <a:t>[Add demo video link]</a:t>
+              <a:t>Will update in main round</a:t>
             </a:r>
             <a:endParaRPr/>
           </a:p>
@@ -129,7 +129,7 @@
             </a:r>
             <a:r>
               <a:rPr lang="en-GB"/>
-              <a:t>[Add live deployment link]</a:t>
+              <a:t>Not deployed yet</a:t>
             </a:r>
             <a:endParaRPr/>
           </a:p>

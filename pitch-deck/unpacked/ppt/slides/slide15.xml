@@ -15,6 +15,33 @@
           <a:chExt cx="0" cy="0"/>
         </a:xfrm>
       </p:grpSpPr>
+      <p:pic>
+        <p:nvPicPr>
+          <p:cNvPr id="152" name="Google Shape;152;p27" title="IDBI banner deck 3.png"/>
+          <p:cNvPicPr preferRelativeResize="0"/>
+          <p:nvPr/>
+        </p:nvPicPr>
+        <p:blipFill rotWithShape="1">
+          <a:blip r:embed="rId3">
+            <a:alphaModFix/>
+          </a:blip>
+          <a:srcRect b="0" l="0" r="0" t="0"/>
+          <a:stretch/>
+        </p:blipFill>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="0" y="0"/>
+            <a:ext cx="9144000" cy="5143500"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln>
+            <a:noFill/>
+          </a:ln>
+        </p:spPr>
+      </p:pic>
       <p:sp>
         <p:nvSpPr>
           <p:cNvPr id="150" name="Google Shape;150;p27"/>
@@ -110,33 +137,6 @@
           </a:p>
         </p:txBody>
       </p:sp>
-      <p:pic>
-        <p:nvPicPr>
-          <p:cNvPr id="152" name="Google Shape;152;p27" title="IDBI banner deck 3.png"/>
-          <p:cNvPicPr preferRelativeResize="0"/>
-          <p:nvPr/>
-        </p:nvPicPr>
-        <p:blipFill rotWithShape="1">
-          <a:blip r:embed="rId3">
-            <a:alphaModFix/>
-          </a:blip>
-          <a:srcRect b="0" l="0" r="0" t="0"/>
-          <a:stretch/>
-        </p:blipFill>
-        <p:spPr>
-          <a:xfrm>
-            <a:off x="0" y="0"/>
-            <a:ext cx="9144000" cy="5143500"/>
-          </a:xfrm>
-          <a:prstGeom prst="rect">
-            <a:avLst/>
-          </a:prstGeom>
-          <a:noFill/>
-          <a:ln>
-            <a:noFill/>
-          </a:ln>
-        </p:spPr>
-      </p:pic>
     </p:spTree>
   </p:cSld>
   <p:clrMapOvr>

@@ -113,7 +113,7 @@
             </a:r>
             <a:r>
               <a:rPr b="0" lang="en-GB" sz="1500"/>
-              <a:t>[Team Name]</a:t>
+              <a:t>Team_quantry</a:t>
             </a:r>
             <a:endParaRPr b="0" sz="1500"/>
           </a:p>
@@ -134,7 +134,7 @@
             </a:r>
             <a:r>
               <a:rPr b="0" lang="en-GB" sz="1500"/>
-              <a:t>[Team Leader Name]</a:t>
+              <a:t>Vishal Sharma</a:t>
             </a:r>
             <a:endParaRPr b="0" sz="1500"/>
           </a:p>
