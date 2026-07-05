@@ -10,6 +10,12 @@ services:
     envVars:
       - key: GEMINI_API_KEY
         sync: false          # set in Render dashboard
+      - key: FIREBASE_CREDENTIALS_JSON
+        sync: false          # paste full service-account JSON in Render dashboard
+      - key: FIRESTORE_PROJECT_ID
+        value: lendiq-dc313
+      - key: FIRESTORE_DATABASE
+        value: (default)
       - key: CORS_ORIGINS
         value: https://lendiq.vercel.app,http://localhost:3000
       - key: ENVIRONMENT

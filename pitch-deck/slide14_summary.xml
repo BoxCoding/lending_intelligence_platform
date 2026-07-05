@@ -1,0 +1,76 @@
+      <p:sp>
+        <p:nvSpPr><p:cNvPr id="1300" name="SummaryTitle"/><p:cNvSpPr txBox="1"/><p:nvPr/></p:nvSpPr>
+        <p:spPr><a:xfrm><a:off x="265350" y="744575"/><a:ext cx="8943000" cy="561900"/></a:xfrm>
+          <a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr>
+        <p:txBody><a:bodyPr anchor="t" bIns="91425" lIns="91425" rIns="91425" tIns="91425"><a:noAutofit/></a:bodyPr><a:lstStyle/>
+          <a:p><a:pPr algn="l"><a:buNone/></a:pPr><a:r><a:rPr b="1" lang="en-GB"/><a:t>Summary &amp; Business Impact</a:t></a:r></a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr><p:cNvPr id="1301" name="SummaryLine"/><p:cNvSpPr txBox="1"/><p:nvPr/></p:nvSpPr>
+        <p:spPr><a:xfrm><a:off x="265350" y="1380000"/><a:ext cx="8613300" cy="500000"/></a:xfrm>
+          <a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr>
+        <p:txBody><a:bodyPr anchor="t" bIns="0" lIns="0" rIns="0" tIns="0"><a:noAutofit/></a:bodyPr><a:lstStyle/>
+          <a:p><a:pPr algn="l"><a:buNone/></a:pPr><a:r><a:rPr lang="en-GB" sz="1250"/><a:t>LendIQ turns raw Account Aggregator statements into pre-qualified, explainable loan leads &#8212; validated end-to-end on a working prototype.</a:t></a:r></a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr><p:cNvPr id="71316" name="Impact"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+        <p:spPr>
+          <a:xfrm><a:off x="265350" y="2100000"/><a:ext cx="4206650" cy="1300000"/></a:xfrm>
+          <a:prstGeom prst="roundRect"><a:avLst><a:gd name="adj" fmla="val 7000"/></a:avLst></a:prstGeom>
+          <a:solidFill><a:srgbClr val="0F5C40"/></a:solidFill>
+          <a:ln><a:noFill/></a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="1" anchor="ctr" bIns="30000" lIns="60000" rIns="60000" tIns="30000" wrap="square"><a:noAutofit/></a:bodyPr>
+          <a:lstStyle/>
+          <a:p><a:pPr algn="ctr"><a:buNone/></a:pPr><a:r><a:rPr b="1" lang="en-GB" sz="2600"><a:solidFill><a:srgbClr val="FFFFFF"/></a:solidFill></a:rPr><a:t>30.2%</a:t></a:r></a:p>
+          <a:p><a:pPr algn="ctr"><a:buNone/></a:pPr><a:r><a:rPr lang="en-GB" sz="1050"><a:solidFill><a:srgbClr val="FFFFFF"/></a:solidFill></a:rPr><a:t>Predicted conversion rate in demo &#8212; target >30% achieved</a:t></a:r></a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr><p:cNvPr id="71428" name="Impact"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+        <p:spPr>
+          <a:xfrm><a:off x="4672000" y="2100000"/><a:ext cx="4206650" cy="1300000"/></a:xfrm>
+          <a:prstGeom prst="roundRect"><a:avLst><a:gd name="adj" fmla="val 7000"/></a:avLst></a:prstGeom>
+          <a:solidFill><a:srgbClr val="D9541A"/></a:solidFill>
+          <a:ln><a:noFill/></a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="1" anchor="ctr" bIns="30000" lIns="60000" rIns="60000" tIns="30000" wrap="square"><a:noAutofit/></a:bodyPr>
+          <a:lstStyle/>
+          <a:p><a:pPr algn="ctr"><a:buNone/></a:pPr><a:r><a:rPr b="1" lang="en-GB" sz="2600"><a:solidFill><a:srgbClr val="FFFFFF"/></a:solidFill></a:rPr><a:t>7.0%</a:t></a:r></a:p>
+          <a:p><a:pPr algn="ctr"><a:buNone/></a:pPr><a:r><a:rPr lang="en-GB" sz="1050"><a:solidFill><a:srgbClr val="FFFFFF"/></a:solidFill></a:rPr><a:t>Income estimation MAPE &#8212; accurate, confidence-scored</a:t></a:r></a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr><p:cNvPr id="7588" name="Impact"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+        <p:spPr>
+          <a:xfrm><a:off x="265350" y="3600000"/><a:ext cx="4206650" cy="1300000"/></a:xfrm>
+          <a:prstGeom prst="roundRect"><a:avLst><a:gd name="adj" fmla="val 7000"/></a:avLst></a:prstGeom>
+          <a:solidFill><a:srgbClr val="1C7293"/></a:solidFill>
+          <a:ln><a:noFill/></a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="1" anchor="ctr" bIns="30000" lIns="60000" rIns="60000" tIns="30000" wrap="square"><a:noAutofit/></a:bodyPr>
+          <a:lstStyle/>
+          <a:p><a:pPr algn="ctr"><a:buNone/></a:pPr><a:r><a:rPr b="1" lang="en-GB" sz="2600"><a:solidFill><a:srgbClr val="FFFFFF"/></a:solidFill></a:rPr><a:t>Minutes, not days</a:t></a:r></a:p>
+          <a:p><a:pPr algn="ctr"><a:buNone/></a:pPr><a:r><a:rPr lang="en-GB" sz="1050"><a:solidFill><a:srgbClr val="FFFFFF"/></a:solidFill></a:rPr><a:t>Faster loan approval via automated scoring</a:t></a:r></a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr><p:cNvPr id="8452" name="Impact"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+        <p:spPr>
+          <a:xfrm><a:off x="4672000" y="3600000"/><a:ext cx="4206650" cy="1300000"/></a:xfrm>
+          <a:prstGeom prst="roundRect"><a:avLst><a:gd name="adj" fmla="val 7000"/></a:avLst></a:prstGeom>
+          <a:solidFill><a:srgbClr val="8A4B12"/></a:solidFill>
+          <a:ln><a:noFill/></a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="1" anchor="ctr" bIns="30000" lIns="60000" rIns="60000" tIns="30000" wrap="square"><a:noAutofit/></a:bodyPr>
+          <a:lstStyle/>
+          <a:p><a:pPr algn="ctr"><a:buNone/></a:pPr><a:r><a:rPr b="1" lang="en-GB" sz="2600"><a:solidFill><a:srgbClr val="FFFFFF"/></a:solidFill></a:rPr><a:t>Explainable by design</a:t></a:r></a:p>
+          <a:p><a:pPr algn="ctr"><a:buNone/></a:pPr><a:r><a:rPr lang="en-GB" sz="1050"><a:solidFill><a:srgbClr val="FFFFFF"/></a:solidFill></a:rPr><a:t>SHAP + GenAI advisor replace manual verification</a:t></a:r></a:p>
+        </p:txBody>
+      </p:sp>

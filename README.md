@@ -45,8 +45,13 @@ npm install
 npm run dev                                             # UI on :3000
 ```
 
-Optional: set `GEMINI_API_KEY` in `backend/.env` for live Gemini answers,
-and `GOOGLE_APPLICATION_CREDENTIALS` for Firestore (local JSON store otherwise).
+Optional: set `GEMINI_API_KEY` in `backend/.env` for live Gemini answers.
+
+**Firestore**: put the Firebase Admin SDK key at `backend/secrets/firebase-adminsdk.json`
+(gitignored) and set `GOOGLE_APPLICATION_CREDENTIALS`/`FIRESTORE_PROJECT_ID` in
+`backend/.env` — without credentials the app falls back to a local JSON store.
+Hosted platforms use `FIREBASE_CREDENTIALS_JSON` (inline) instead; see
+[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for the full Vercel + Render walkthrough.
 
 ### Docker
 

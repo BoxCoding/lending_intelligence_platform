@@ -17,7 +17,9 @@ class Settings(BaseSettings):
 
     # Firestore
     google_application_credentials: str = ""
+    firebase_credentials_json: str = ""   # inline JSON (for Render/Vercel env vars)
     firestore_project_id: str = ""
+    firestore_database: str = "(default)"  # named DBs supported, e.g. "LendIQ"
     # Local JSON persistence fallback when Firestore is not configured
     local_store_path: str = "data/store"
 

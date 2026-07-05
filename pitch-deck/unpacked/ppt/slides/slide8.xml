@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<p:sld xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mv="urn:schemas-microsoft-com:mac:vml" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" xmlns:c="http://schemas.openxmlformats.org/drawingml/2006/chart" xmlns:dgm="http://schemas.openxmlformats.org/drawingml/2006/diagram" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:pvml="urn:schemas-microsoft-com:office:powerpoint" xmlns:com="http://schemas.openxmlformats.org/drawingml/2006/compatibility" xmlns:p14="http://schemas.microsoft.com/office/powerpoint/2010/main" xmlns:p15="http://schemas.microsoft.com/office/powerpoint/2012/main" xmlns:ahyp="http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor">
+  <p:cSld>
+    <p:spTree>
+      <p:nvGrpSpPr>
+        <p:cNvPr id="101" name="Shape 101"/>
+        <p:cNvGrpSpPr/>
+        <p:nvPr/>
+      </p:nvGrpSpPr>
+      <p:grpSpPr>
+        <a:xfrm>
+          <a:off x="0" y="0"/>
+          <a:ext cx="0" cy="0"/>
+          <a:chOff x="0" y="0"/>
+          <a:chExt cx="0" cy="0"/>
+        </a:xfrm>
+      </p:grpSpPr>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="102" name="Google Shape;102;p20"/>
+          <p:cNvSpPr txBox="1"/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="265350" y="744575"/>
+            <a:ext cx="8943000" cy="561900"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln>
+            <a:noFill/>
+          </a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="0" anchor="t" bIns="91425" lIns="91425" spcFirstLastPara="1" rIns="91425" wrap="square" tIns="91425">
+            <a:noAutofit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+              <a:spcBef>
+                <a:spcPts val="0"/>
+              </a:spcBef>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr b="1" lang="en-GB"/>
+              <a:t>Technologies to be used in the solution</a:t>
+            </a:r>
+            <a:endParaRPr b="1"/>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr><p:cNvPr id="46996" name="CardHdr"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+        <p:spPr>
+          <a:xfrm><a:off x="265350" y="1420000"/><a:ext cx="1594660" cy="500000"/></a:xfrm>
+          <a:prstGeom prst="roundRect"><a:avLst><a:gd name="adj" fmla="val 12000"/></a:avLst></a:prstGeom>
+          <a:solidFill><a:srgbClr val="0F5C40"/></a:solidFill>
+          <a:ln><a:noFill/></a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="1" anchor="ctr" bIns="20000" lIns="40000" rIns="40000" tIns="20000" wrap="square"><a:noAutofit/></a:bodyPr>
+          <a:lstStyle/>
+          <a:p><a:pPr algn="ctr"><a:buNone/></a:pPr><a:r><a:rPr b="1" lang="en-GB" sz="1100"><a:solidFill><a:srgbClr val="FFFFFF"/></a:solidFill></a:rPr><a:t>Backend</a:t></a:r></a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr><p:cNvPr id="47046" name="CardBody"/><p:cNvSpPr txBox="1"/><p:nvPr/></p:nvSpPr>
+        <p:spPr>
+          <a:xfrm><a:off x="265350" y="1980000"/><a:ext cx="1594660" cy="2740000"/></a:xfrm>
+          <a:prstGeom prst="rect"><a:avLst/></a:prstGeom>
+          <a:solidFill><a:srgbClr val="F4F7F6"/></a:solidFill>
+          <a:ln><a:noFill/></a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="0" anchor="t" bIns="20000" lIns="30000" rIns="30000" tIns="120000" wrap="square"><a:noAutofit/></a:bodyPr>
+          <a:lstStyle/>
+          <a:p><a:pPr algn="ctr"><a:spcAft><a:spcPts val="300"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-GB" sz="1050"/><a:t>FastAPI</a:t></a:r></a:p><a:p><a:pPr algn="ctr"><a:spcAft><a:spcPts val="300"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-GB" sz="1050"/><a:t>Python 3.12</a:t></a:r></a:p><a:p><a:pPr algn="ctr"><a:spcAft><a:spcPts val="300"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-GB" sz="1050"/><a:t>Pydantic</a:t></a:r></a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr><p:cNvPr id="22644" name="CardHdr"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+        <p:spPr>
+          <a:xfrm><a:off x="2020010" y="1420000"/><a:ext cx="1594660" cy="500000"/></a:xfrm>
+          <a:prstGeom prst="roundRect"><a:avLst><a:gd name="adj" fmla="val 12000"/></a:avLst></a:prstGeom>
+          <a:solidFill><a:srgbClr val="D9541A"/></a:solidFill>
+          <a:ln><a:noFill/></a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="1" anchor="ctr" bIns="20000" lIns="40000" rIns="40000" tIns="20000" wrap="square"><a:noAutofit/></a:bodyPr>
+          <a:lstStyle/>
+          <a:p><a:pPr algn="ctr"><a:buNone/></a:pPr><a:r><a:rPr b="1" lang="en-GB" sz="1100"><a:solidFill><a:srgbClr val="FFFFFF"/></a:solidFill></a:rPr><a:t>Machine Learning</a:t></a:r></a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr><p:cNvPr id="22694" name="CardBody"/><p:cNvSpPr txBox="1"/><p:nvPr/></p:nvSpPr>
+        <p:spPr>
+          <a:xfrm><a:off x="2020010" y="1980000"/><a:ext cx="1594660" cy="2740000"/></a:xfrm>
+          <a:prstGeom prst="rect"><a:avLst/></a:prstGeom>
+          <a:solidFill><a:srgbClr val="F4F7F6"/></a:solidFill>
+          <a:ln><a:noFill/></a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="0" anchor="t" bIns="20000" lIns="30000" rIns="30000" tIns="120000" wrap="square"><a:noAutofit/></a:bodyPr>
+          <a:lstStyle/>
+          <a:p><a:pPr algn="ctr"><a:spcAft><a:spcPts val="300"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-GB" sz="1050"/><a:t>Scikit-learn</a:t></a:r></a:p><a:p><a:pPr algn="ctr"><a:spcAft><a:spcPts val="300"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-GB" sz="1050"/><a:t>XGBoost</a:t></a:r></a:p><a:p><a:pPr algn="ctr"><a:spcAft><a:spcPts val="300"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-GB" sz="1050"/><a:t>LightGBM</a:t></a:r></a:p><a:p><a:pPr algn="ctr"><a:spcAft><a:spcPts val="300"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-GB" sz="1050"/><a:t>CatBoost</a:t></a:r></a:p><a:p><a:pPr algn="ctr"><a:spcAft><a:spcPts val="300"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-GB" sz="1050"/><a:t>SHAP</a:t></a:r></a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr><p:cNvPr id="24948" name="CardHdr"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+        <p:spPr>
+          <a:xfrm><a:off x="3774670" y="1420000"/><a:ext cx="1594660" cy="500000"/></a:xfrm>
+          <a:prstGeom prst="roundRect"><a:avLst><a:gd name="adj" fmla="val 12000"/></a:avLst></a:prstGeom>
+          <a:solidFill><a:srgbClr val="1C7293"/></a:solidFill>
+          <a:ln><a:noFill/></a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="1" anchor="ctr" bIns="20000" lIns="40000" rIns="40000" tIns="20000" wrap="square"><a:noAutofit/></a:bodyPr>
+          <a:lstStyle/>
+          <a:p><a:pPr algn="ctr"><a:buNone/></a:pPr><a:r><a:rPr b="1" lang="en-GB" sz="1100"><a:solidFill><a:srgbClr val="FFFFFF"/></a:solidFill></a:rPr><a:t>Frontend</a:t></a:r></a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr><p:cNvPr id="24998" name="CardBody"/><p:cNvSpPr txBox="1"/><p:nvPr/></p:nvSpPr>
+        <p:spPr>
+          <a:xfrm><a:off x="3774670" y="1980000"/><a:ext cx="1594660" cy="2740000"/></a:xfrm>
+          <a:prstGeom prst="rect"><a:avLst/></a:prstGeom>
+          <a:solidFill><a:srgbClr val="F4F7F6"/></a:solidFill>
+          <a:ln><a:noFill/></a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="0" anchor="t" bIns="20000" lIns="30000" rIns="30000" tIns="120000" wrap="square"><a:noAutofit/></a:bodyPr>
+          <a:lstStyle/>
+          <a:p><a:pPr algn="ctr"><a:spcAft><a:spcPts val="300"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-GB" sz="1050"/><a:t>Next.js 15</a:t></a:r></a:p><a:p><a:pPr algn="ctr"><a:spcAft><a:spcPts val="300"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-GB" sz="1050"/><a:t>TypeScript</a:t></a:r></a:p><a:p><a:pPr algn="ctr"><a:spcAft><a:spcPts val="300"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-GB" sz="1050"/><a:t>Tailwind CSS</a:t></a:r></a:p><a:p><a:pPr algn="ctr"><a:spcAft><a:spcPts val="300"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-GB" sz="1050"/><a:t>Shadcn UI</a:t></a:r></a:p><a:p><a:pPr algn="ctr"><a:spcAft><a:spcPts val="300"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-GB" sz="1050"/><a:t>React Query</a:t></a:r></a:p><a:p><a:pPr algn="ctr"><a:spcAft><a:spcPts val="300"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-GB" sz="1050"/><a:t>Recharts</a:t></a:r></a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr><p:cNvPr id="41844" name="CardHdr"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+        <p:spPr>
+          <a:xfrm><a:off x="5529330" y="1420000"/><a:ext cx="1594660" cy="500000"/></a:xfrm>
+          <a:prstGeom prst="roundRect"><a:avLst><a:gd name="adj" fmla="val 12000"/></a:avLst></a:prstGeom>
+          <a:solidFill><a:srgbClr val="6B4A9E"/></a:solidFill>
+          <a:ln><a:noFill/></a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="1" anchor="ctr" bIns="20000" lIns="40000" rIns="40000" tIns="20000" wrap="square"><a:noAutofit/></a:bodyPr>
+          <a:lstStyle/>
+          <a:p><a:pPr algn="ctr"><a:buNone/></a:pPr><a:r><a:rPr b="1" lang="en-GB" sz="1100"><a:solidFill><a:srgbClr val="FFFFFF"/></a:solidFill></a:rPr><a:t>AI &amp; Data</a:t></a:r></a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr><p:cNvPr id="41894" name="CardBody"/><p:cNvSpPr txBox="1"/><p:nvPr/></p:nvSpPr>
+        <p:spPr>
+          <a:xfrm><a:off x="5529330" y="1980000"/><a:ext cx="1594660" cy="2740000"/></a:xfrm>
+          <a:prstGeom prst="rect"><a:avLst/></a:prstGeom>
+          <a:solidFill><a:srgbClr val="F4F7F6"/></a:solidFill>
+          <a:ln><a:noFill/></a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="0" anchor="t" bIns="20000" lIns="30000" rIns="30000" tIns="120000" wrap="square"><a:noAutofit/></a:bodyPr>
+          <a:lstStyle/>
+          <a:p><a:pPr algn="ctr"><a:spcAft><a:spcPts val="300"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-GB" sz="1050"/><a:t>Gemini 3.5 Flash</a:t></a:r></a:p><a:p><a:pPr algn="ctr"><a:spcAft><a:spcPts val="300"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-GB" sz="1050"/><a:t>text-embedding-004</a:t></a:r></a:p><a:p><a:pPr algn="ctr"><a:spcAft><a:spcPts val="300"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-GB" sz="1050"/><a:t>LangGraph</a:t></a:r></a:p><a:p><a:pPr algn="ctr"><a:spcAft><a:spcPts val="300"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-GB" sz="1050"/><a:t>Firestore</a:t></a:r></a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr><p:cNvPr id="46388" name="CardHdr"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+        <p:spPr>
+          <a:xfrm><a:off x="7283990" y="1420000"/><a:ext cx="1594660" cy="500000"/></a:xfrm>
+          <a:prstGeom prst="roundRect"><a:avLst><a:gd name="adj" fmla="val 12000"/></a:avLst></a:prstGeom>
+          <a:solidFill><a:srgbClr val="8A4B12"/></a:solidFill>
+          <a:ln><a:noFill/></a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="1" anchor="ctr" bIns="20000" lIns="40000" rIns="40000" tIns="20000" wrap="square"><a:noAutofit/></a:bodyPr>
+          <a:lstStyle/>
+          <a:p><a:pPr algn="ctr"><a:buNone/></a:pPr><a:r><a:rPr b="1" lang="en-GB" sz="1100"><a:solidFill><a:srgbClr val="FFFFFF"/></a:solidFill></a:rPr><a:t>Deployment</a:t></a:r></a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr><p:cNvPr id="46438" name="CardBody"/><p:cNvSpPr txBox="1"/><p:nvPr/></p:nvSpPr>
+        <p:spPr>
+          <a:xfrm><a:off x="7283990" y="1980000"/><a:ext cx="1594660" cy="2740000"/></a:xfrm>
+          <a:prstGeom prst="rect"><a:avLst/></a:prstGeom>
+          <a:solidFill><a:srgbClr val="F4F7F6"/></a:solidFill>
+          <a:ln><a:noFill/></a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="0" anchor="t" bIns="20000" lIns="30000" rIns="30000" tIns="120000" wrap="square"><a:noAutofit/></a:bodyPr>
+          <a:lstStyle/>
+          <a:p><a:pPr algn="ctr"><a:spcAft><a:spcPts val="300"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-GB" sz="1050"/><a:t>Docker</a:t></a:r></a:p><a:p><a:pPr algn="ctr"><a:spcAft><a:spcPts val="300"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-GB" sz="1050"/><a:t>Vercel</a:t></a:r></a:p><a:p><a:pPr algn="ctr"><a:spcAft><a:spcPts val="300"/></a:spcAft><a:buNone/></a:pPr><a:r><a:rPr lang="en-GB" sz="1050"/><a:t>Render</a:t></a:r></a:p>
+        </p:txBody>
+      </p:sp>
+      <p:pic>
+        <p:nvPicPr>
+          <p:cNvPr id="103" name="Google Shape;103;p20" title="IDBI banner deck 2.png"/>
+          <p:cNvPicPr preferRelativeResize="0"/>
+          <p:nvPr/>
+        </p:nvPicPr>
+        <p:blipFill rotWithShape="1">
+          <a:blip r:embed="rId3">
+            <a:alphaModFix/>
+          </a:blip>
+          <a:srcRect b="88462" l="0" r="0" t="0"/>
+          <a:stretch/>
+        </p:blipFill>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="0" y="0"/>
+            <a:ext cx="9144000" cy="593476"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln>
+            <a:noFill/>
+          </a:ln>
+        </p:spPr>
+      </p:pic>
+      <p:pic>
+        <p:nvPicPr>
+          <p:cNvPr id="104" name="Google Shape;104;p20" title="IDBI banner deck 2.png"/>
+          <p:cNvPicPr preferRelativeResize="0"/>
+          <p:nvPr/>
+        </p:nvPicPr>
+        <p:blipFill rotWithShape="1">
+          <a:blip r:embed="rId3">
+            <a:alphaModFix/>
+          </a:blip>
+          <a:srcRect b="0" l="0" r="0" t="98077"/>
+          <a:stretch/>
+        </p:blipFill>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="0" y="5044576"/>
+            <a:ext cx="9144000" cy="98925"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln>
+            <a:noFill/>
+          </a:ln>
+        </p:spPr>
+      </p:pic>
+    </p:spTree>
+  </p:cSld>
+  <p:clrMapOvr>
+    <a:masterClrMapping/>
+  </p:clrMapOvr>
+</p:sld>

@@ -3,6 +3,7 @@ __pycache__/
 .venv/
 backend/data/store/
 backend/.env
+backend/secrets/
 node_modules/
 .next/
 frontend/.env.local

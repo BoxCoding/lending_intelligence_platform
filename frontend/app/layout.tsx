@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
+import FirebaseAnalytics from "@/components/firebase-analytics";
 import Providers from "./providers";
 
 export const metadata: Metadata = {
@@ -18,6 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className="dark">
       <body>
+        <FirebaseAnalytics />
         <Providers>
           <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur">
             <div className="mx-auto flex h-14 max-w-7xl items-center gap-6 px-4">

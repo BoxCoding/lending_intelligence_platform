@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?><p:sld xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mv="urn:schemas-microsoft-com:mac:vml" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" xmlns:c="http://schemas.openxmlformats.org/drawingml/2006/chart" xmlns:dgm="http://schemas.openxmlformats.org/drawingml/2006/diagram" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:pvml="urn:schemas-microsoft-com:office:powerpoint" xmlns:com="http://schemas.openxmlformats.org/drawingml/2006/compatibility" xmlns:p14="http://schemas.microsoft.com/office/powerpoint/2010/main" xmlns:p15="http://schemas.microsoft.com/office/powerpoint/2012/main" xmlns:ahyp="http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor">
+  <p:cSld>
+    <p:spTree>
+      <p:nvGrpSpPr>
+        <p:cNvPr id="129" name="Shape 129"/>
+        <p:cNvGrpSpPr/>
+        <p:nvPr/>
+      </p:nvGrpSpPr>
+      <p:grpSpPr>
+        <a:xfrm>
+          <a:off x="0" y="0"/>
+          <a:ext cx="0" cy="0"/>
+          <a:chOff x="0" y="0"/>
+          <a:chExt cx="0" cy="0"/>
+        </a:xfrm>
+      </p:grpSpPr>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="130" name="Google Shape;130;p24"/>
+          <p:cNvSpPr txBox="1"/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="265350" y="744575"/>
+            <a:ext cx="8943000" cy="561900"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln>
+            <a:noFill/>
+          </a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="0" anchor="t" bIns="91425" lIns="91425" spcFirstLastPara="1" rIns="91425" wrap="square" tIns="91425">
+            <a:noAutofit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+              <a:spcBef>
+                <a:spcPts val="0"/>
+              </a:spcBef>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr b="1" lang="en-GB"/>
+              <a:t>Additional Details/Future Development (if any)</a:t>
+            </a:r>
+            <a:endParaRPr b="1"/>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr><p:cNvPr id="1210" name="FutureCol1"/><p:cNvSpPr txBox="1"/><p:nvPr/></p:nvSpPr>
+        <p:spPr>
+          <a:xfrm><a:off x="265350" y="1380000"/><a:ext cx="4150000" cy="3600000"/></a:xfrm>
+          <a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="0" anchor="t" bIns="0" lIns="0" rIns="91425" tIns="0" wrap="square"><a:noAutofit/></a:bodyPr>
+          <a:lstStyle/>
+          <a:p><a:pPr indent="-228600" lvl="0" marL="228600" algn="l"><a:spcAft><a:spcPts val="500"/></a:spcAft><a:buSzPts val="1200"/><a:buFont typeface="Arial"/><a:buChar char="●"/></a:pPr>
+            <a:r><a:rPr b="1" lang="en-GB" sz="1200"><a:solidFill><a:srgbClr val="0F5C40"/></a:solidFill></a:rPr><a:t xml:space="preserve">Real AA integration — </a:t></a:r>
+            <a:r><a:rPr lang="en-GB" sz="1200"/><a:t>connect to Setu / Sahamati AA sandbox, retrain models on real consented data</a:t></a:r>
+          </a:p>
+          <a:p><a:pPr indent="-228600" lvl="0" marL="228600" algn="l"><a:spcAft><a:spcPts val="500"/></a:spcAft><a:buSzPts val="1200"/><a:buFont typeface="Arial"/><a:buChar char="●"/></a:pPr>
+            <a:r><a:rPr b="1" lang="en-GB" sz="1200"><a:solidFill><a:srgbClr val="0F5C40"/></a:solidFill></a:rPr><a:t xml:space="preserve">Auth &amp; RBAC — </a:t></a:r>
+            <a:r><a:rPr lang="en-GB" sz="1200"/><a:t>Firebase Auth with underwriter / RM role-based dashboard access</a:t></a:r>
+          </a:p>
+          <a:p><a:pPr indent="-228600" lvl="0" marL="228600" algn="l"><a:spcAft><a:spcPts val="500"/></a:spcAft><a:buSzPts val="1200"/><a:buFont typeface="Arial"/><a:buChar char="●"/></a:pPr>
+            <a:r><a:rPr b="1" lang="en-GB" sz="1200"><a:solidFill><a:srgbClr val="0F5C40"/></a:solidFill></a:rPr><a:t xml:space="preserve">Model monitoring — </a:t></a:r>
+            <a:r><a:rPr lang="en-GB" sz="1200"/><a:t>scheduled drift detection (already scaffolded) with automatic retraining triggers</a:t></a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr><p:cNvPr id="1211" name="FutureCol2"/><p:cNvSpPr txBox="1"/><p:nvPr/></p:nvSpPr>
+        <p:spPr>
+          <a:xfrm><a:off x="4650000" y="1380000"/><a:ext cx="4228650" cy="3600000"/></a:xfrm>
+          <a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="0" anchor="t" bIns="0" lIns="0" rIns="0" tIns="0" wrap="square"><a:noAutofit/></a:bodyPr>
+          <a:lstStyle/>
+          <a:p><a:pPr indent="-228600" lvl="0" marL="228600" algn="l"><a:spcAft><a:spcPts val="500"/></a:spcAft><a:buSzPts val="1200"/><a:buFont typeface="Arial"/><a:buChar char="●"/></a:pPr>
+            <a:r><a:rPr b="1" lang="en-GB" sz="1200"><a:solidFill><a:srgbClr val="D9541A"/></a:solidFill></a:rPr><a:t xml:space="preserve">Multi-lingual advisor — </a:t></a:r>
+            <a:r><a:rPr lang="en-GB" sz="1200"/><a:t>Hindi &amp; regional-language GenAI conversations, WhatsApp/SMS lead nudges</a:t></a:r>
+          </a:p>
+          <a:p><a:pPr indent="-228600" lvl="0" marL="228600" algn="l"><a:spcAft><a:spcPts val="500"/></a:spcAft><a:buSzPts val="1200"/><a:buFont typeface="Arial"/><a:buChar char="●"/></a:pPr>
+            <a:r><a:rPr b="1" lang="en-GB" sz="1200"><a:solidFill><a:srgbClr val="D9541A"/></a:solidFill></a:rPr><a:t xml:space="preserve">Model registry — </a:t></a:r>
+            <a:r><a:rPr lang="en-GB" sz="1200"/><a:t>Vertex AI registry with champion/challenger traffic-split rollout</a:t></a:r>
+          </a:p>
+          <a:p><a:pPr indent="-228600" lvl="0" marL="228600" algn="l"><a:spcAft><a:spcPts val="500"/></a:spcAft><a:buSzPts val="1200"/><a:buFont typeface="Arial"/><a:buChar char="●"/></a:pPr>
+            <a:r><a:rPr b="1" lang="en-GB" sz="1200"><a:solidFill><a:srgbClr val="D9541A"/></a:solidFill></a:rPr><a:t xml:space="preserve">Core banking integration — </a:t></a:r>
+            <a:r><a:rPr lang="en-GB" sz="1200"/><a:t>push HOT leads directly into the LOS/CRM for one-click underwriting</a:t></a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:pic>
+        <p:nvPicPr>
+          <p:cNvPr id="131" name="Google Shape;131;p24" title="IDBI banner deck 2.png"/>
+          <p:cNvPicPr preferRelativeResize="0"/>
+          <p:nvPr/>
+        </p:nvPicPr>
+        <p:blipFill rotWithShape="1">
+          <a:blip r:embed="rId3">
+            <a:alphaModFix/>
+          </a:blip>
+          <a:srcRect b="88462" l="0" r="0" t="0"/>
+          <a:stretch/>
+        </p:blipFill>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="0" y="0"/>
+            <a:ext cx="9144000" cy="593476"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln>
+            <a:noFill/>
+          </a:ln>
+        </p:spPr>
+      </p:pic>
+      <p:pic>
+        <p:nvPicPr>
+          <p:cNvPr id="132" name="Google Shape;132;p24" title="IDBI banner deck 2.png"/>
+          <p:cNvPicPr preferRelativeResize="0"/>
+          <p:nvPr/>
+        </p:nvPicPr>
+        <p:blipFill rotWithShape="1">
+          <a:blip r:embed="rId3">
+            <a:alphaModFix/>
+          </a:blip>
+          <a:srcRect b="0" l="0" r="0" t="98077"/>
+          <a:stretch/>
+        </p:blipFill>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="0" y="5044576"/>
+            <a:ext cx="9144000" cy="98925"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln>
+            <a:noFill/>
+          </a:ln>
+        </p:spPr>
+      </p:pic>
+    </p:spTree>
+  </p:cSld>
+  <p:clrMapOvr>
+    <a:masterClrMapping/>
+  </p:clrMapOvr>
+</p:sld>

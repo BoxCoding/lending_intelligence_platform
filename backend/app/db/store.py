@@ -28,11 +28,26 @@ class BaseStore:
 
 
 class FirestoreStore(BaseStore):
-    def __init__(self, project_id: str):
+    def __init__(self, project_id: str, database: str = "(default)", inline_json: str = ""):
         from google.cloud import firestore
 
-        self._db = firestore.Client(project=project_id or None)
-        logger.info("Firestore store initialised (project=%s)", project_id or "default")
+        if inline_json:
+            # Deploy-friendly: whole service-account JSON in one env var
+            from google.oauth2 import service_account
+
+            info = json.loads(inline_json)
+            creds = service_account.Credentials.from_service_account_info(info)
+            self._db = firestore.Client(
+                project=info.get("project_id", project_id) or None,
+                credentials=creds,
+                database=database,
+            )
+        else:
+            self._db = firestore.Client(project=project_id or None, database=database)
+        logger.info(
+            "Firestore store initialised (project=%s, database=%s)",
+            self._db.project, database,
+        )
 
     def put(self, collection: str, doc_id: str, data: dict) -> None:
         self._db.collection(collection).document(doc_id).set(data)
@@ -82,10 +97,19 @@ class LocalJSONStore(BaseStore):
 
 def _create_store() -> BaseStore:
     settings = get_settings()
+    inline = settings.firebase_credentials_json or os.getenv("FIREBASE_CREDENTIALS_JSON", "")
     creds = settings.google_application_credentials or os.getenv("GOOGLE_APPLICATION_CREDENTIALS", "")
-    if creds and Path(creds).exists():
+    if creds and not Path(creds).is_absolute():
+        creds = str(Path(__file__).resolve().parents[2] / creds)
+    if inline or (creds and Path(creds).exists()):
         try:
-            return FirestoreStore(settings.firestore_project_id)
+            if not inline:
+                os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = creds
+            return FirestoreStore(
+                settings.firestore_project_id,
+                database=settings.firestore_database,
+                inline_json=inline,
+            )
         except Exception as exc:
             logger.warning("Firestore unavailable (%s) — using local store", exc)
     return LocalJSONStore(settings.local_store_path)
