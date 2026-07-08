@@ -1,4 +1,5 @@
 """Application configuration loaded from environment variables."""
+
 import os
 from functools import lru_cache
 
@@ -17,7 +18,7 @@ class Settings(BaseSettings):
 
     # Firestore
     google_application_credentials: str = ""
-    firebase_credentials_json: str = ""   # inline JSON (for Render/Vercel env vars)
+    firebase_credentials_json: str = ""  # inline JSON (for Render/Vercel env vars)
     firestore_project_id: str = ""
     firestore_database: str = "(default)"  # named DBs supported, e.g. "LendIQ"
     # Local JSON persistence fallback when Firestore is not configured
@@ -30,7 +31,7 @@ class Settings(BaseSettings):
     cors_origins: str = "http://localhost:3000,https://*.vercel.app"
 
     # Lending policy knobs
-    max_foir: float = 0.55          # max Fixed Obligation to Income Ratio
+    max_foir: float = 0.55  # max Fixed Obligation to Income Ratio
     min_lead_score_hot: int = 68
     min_lead_score_warm: int = 48
 

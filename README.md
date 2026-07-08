@@ -8,6 +8,25 @@ explainable WHY.
 
 **Products covered:** Personal Loan · Home Loan · Mortgage (LAP) · Auto Loan
 
+## Problem statement alignment
+
+Traditional retail lending relies on bureau scores and static financial
+metrics. Every named pain point in the problem statement maps to a specific
+LendIQ module — this isn't a generic lending demo retrofitted to the brief:
+
+| Problem statement says… | LendIQ answers with… |
+|---|---|
+| Low lead conversion | AI Lead Scoring Engine (HOT/WARM/COLD, 0–100) — demo run hits **30.2%** predicted conversion, above the >30% target |
+| Poor understanding of customer intent | Borrowing Intent Model — 30/60/90-day application probability + human-readable reason codes |
+| Inaccurate income estimation | Income Estimation Engine — confidence-scored monthly/net/disposable income, **7% MAPE** on held-out test data |
+| High underwriting effort | Repayment Capacity Model (FOIR/DTI/EMI headroom) automates what a credit officer reads off bank statements by hand |
+| Manual verification | AA Parser — 25-category transaction classification replaces manual statement reading; SHAP explainability gives an auditable paper trail |
+| High acquisition cost | Pre-qualified targeting via Lead Scoring replaces blanket marketing spend with a ranked, explainable queue |
+| High repayment capacity (objective) | Repayment Capacity Model — eligible EMI, DTI, per-product loan capacity |
+| High borrowing intent (objective) | Borrowing Intent Model — life-event signals (property tokens, vehicle bookings, loan enquiries) |
+| Stable financial behaviour (objective) | Risk Engine's `financial_stability`/`behavior_stability` scores + Income Engine's `cash_flow_stability`/`salary_regularity` |
+| Low default probability (objective) | Risk Engine — probability of default, grade A–E, fraud indicators |
+
 ## What it does
 
 | Module | Output |
@@ -78,6 +97,25 @@ deployment/ Render/Vercel/deploy.sh
 docs/       Architecture (mermaid diagrams), API reference
 data/       synthetic AA payloads + labels + sample payload
 ```
+
+## Testing & code quality
+
+```bash
+cd backend
+.venv/bin/python -m pytest ../ -q --cov --cov-report=term-missing   # 113 tests, 92% coverage on app/
+.venv/bin/ruff check backend/app ml agents backend/tests             # lint
+.venv/bin/ruff format backend/app ml agents backend/tests            # format
+
+cd ../frontend
+npm run lint          # ESLint (next/core-web-vitals + next/typescript)
+npm run format:check  # Prettier
+npx tsc --noEmit      # type-check
+```
+
+Tests cover every engine (income, repayment, intent, risk, lead scoring,
+recommendation), the AA parser/feature pipeline, explainability, the offline
+LLM advisor, and all API routes end-to-end via `TestClient` — isolated from
+the live Firestore project with a throwaway local store per test.
 
 ## Evaluation metrics (written to `ml/models/model_registry.json`)
 

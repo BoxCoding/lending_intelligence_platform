@@ -4,7 +4,7 @@ Lazily loads trained model artifacts (joblib) produced by ml/train.py.
 Missing artifacts are tolerated — engines fall back to calibrated rules,
 so the API stays functional before models are trained.
 """
-import os
+
 from pathlib import Path
 
 from app.core.config import get_settings

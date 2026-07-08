@@ -5,10 +5,11 @@ thread-safe local JSON store with the same interface, so the whole
 platform runs offline. Collections mirror the logical schema:
 customers, features, predictions, lead_scores, recommendations, audit.
 """
+
 import json
 import os
 import threading
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 from app.core.config import get_settings
@@ -22,8 +23,8 @@ class BaseStore:
     def audit(self, action: str, detail: dict) -> None:
         self.put(
             "audit",
-            datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%f"),
-            {"action": action, "detail": detail, "at": datetime.now(timezone.utc).isoformat()},
+            datetime.now(UTC).strftime("%Y%m%dT%H%M%S%f"),
+            {"action": action, "detail": detail, "at": datetime.now(UTC).isoformat()},
         )
 
 
@@ -46,7 +47,8 @@ class FirestoreStore(BaseStore):
             self._db = firestore.Client(project=project_id or None, database=database)
         logger.info(
             "Firestore store initialised (project=%s, database=%s)",
-            self._db.project, database,
+            self._db.project,
+            database,
         )
 
     def put(self, collection: str, doc_id: str, data: dict) -> None:
@@ -98,7 +100,9 @@ class LocalJSONStore(BaseStore):
 def _create_store() -> BaseStore:
     settings = get_settings()
     inline = settings.firebase_credentials_json or os.getenv("FIREBASE_CREDENTIALS_JSON", "")
-    creds = settings.google_application_credentials or os.getenv("GOOGLE_APPLICATION_CREDENTIALS", "")
+    creds = settings.google_application_credentials or os.getenv(
+        "GOOGLE_APPLICATION_CREDENTIALS", ""
+    )
     if creds and not Path(creds).is_absolute():
         creds = str(Path(__file__).resolve().parents[2] / creds)
     if inline or (creds and Path(creds).exists()):

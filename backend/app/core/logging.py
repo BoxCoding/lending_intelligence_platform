@@ -1,4 +1,5 @@
 """Structured logging setup for the platform."""
+
 import logging
 import sys
 

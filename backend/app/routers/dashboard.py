@@ -1,4 +1,5 @@
 """Executive dashboard aggregation and customer detail endpoints."""
+
 import json
 from collections import Counter
 from pathlib import Path
@@ -18,7 +19,9 @@ def model_metrics():
 
     configured = get_settings().model_dir
     base = Path(__file__).resolve().parents[2]  # backend/
-    model_dir = Path(configured) if Path(configured).is_absolute() else (base / configured).resolve()
+    model_dir = (
+        Path(configured) if Path(configured).is_absolute() else (base / configured).resolve()
+    )
     registry_file = model_dir / "model_registry.json"
     if not registry_file.exists():
         raise HTTPException(status_code=404, detail="Models not trained yet — run ml/train.py")
@@ -50,7 +53,11 @@ def dashboard():
             product_counter[offer["product"]] += 1
 
     intent_buckets = Counter(
-        "High" if p["intent"]["intent_score"] >= 60 else "Medium" if p["intent"]["intent_score"] >= 30 else "Low"
+        "High"
+        if p["intent"]["intent_score"] >= 60
+        else "Medium"
+        if p["intent"]["intent_score"] >= 30
+        else "Low"
         for p in profiles
     )
 
@@ -64,8 +71,11 @@ def dashboard():
                 "income": round(p["income"]["monthly_income"]),
                 "risk_grade": p["risk"]["risk_grade"],
                 "intent_score": p["intent"]["intent_score"],
-                "top_product": (p["recommendation"]["offers"][0]["product"]
-                                if p["recommendation"]["offers"] else "—"),
+                "top_product": (
+                    p["recommendation"]["offers"][0]["product"]
+                    if p["recommendation"]["offers"]
+                    else "—"
+                ),
                 "conversion_probability": p["lead"]["conversion_probability"],
             }
             for p in profiles
@@ -93,9 +103,13 @@ def dashboard():
                 {"stage": "Predicted Conversions", "count": round(sum(conversions))},
             ],
             "risk_distribution": [{"grade": g, "count": grades.get(g, 0)} for g in "ABCDE"],
-            "loan_distribution": [{"product": k, "count": v} for k, v in product_counter.most_common()],
+            "loan_distribution": [
+                {"product": k, "count": v} for k, v in product_counter.most_common()
+            ],
             "income_histogram": _histogram(incomes),
-            "intent_distribution": [{"bucket": b, "count": intent_buckets.get(b, 0)} for b in ("High", "Medium", "Low")],
+            "intent_distribution": [
+                {"bucket": b, "count": intent_buckets.get(b, 0)} for b in ("High", "Medium", "Low")
+            ],
         },
         "leads": leads,
         "models": registry.status(),
@@ -120,13 +134,25 @@ def _histogram(values: list[float], bins: int = 6) -> list[dict]:
         idx = min(int((v - lo) / width), bins - 1)
         buckets[idx] += 1
     return [
-        {"range": f"₹{(lo + i * width) / 1000:.0f}k–{(lo + (i + 1) * width) / 1000:.0f}k", "count": c}
+        {
+            "range": f"₹{(lo + i * width) / 1000:.0f}k–{(lo + (i + 1) * width) / 1000:.0f}k",
+            "count": c,
+        }
         for i, c in enumerate(buckets)
     ]
 
 
 def _empty_kpis() -> dict:
-    return {k: 0 for k in (
-        "total_leads", "hot_leads", "warm_leads", "cold_leads",
-        "predicted_conversions", "predicted_conversion_rate", "avg_income", "avg_eligibility",
-    )}
+    return dict.fromkeys(
+        (
+            "total_leads",
+            "hot_leads",
+            "warm_leads",
+            "cold_leads",
+            "predicted_conversions",
+            "predicted_conversion_rate",
+            "avg_income",
+            "avg_eligibility",
+        ),
+        0,
+    )

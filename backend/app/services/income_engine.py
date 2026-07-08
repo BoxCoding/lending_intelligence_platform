@@ -5,6 +5,7 @@ regressor (LightGBM, trained in ml/train.py) when the artifact is
 available. Produces a confidence score based on data depth and salary
 regularity.
 """
+
 from app.core.logging import logger
 from app.ml_registry import registry
 from app.schemas.models import IncomeEstimate
@@ -73,7 +74,7 @@ def _rule_based_income(features: dict[str, float]) -> float:
 
 def _confidence(features: dict[str, float], ml_used: bool) -> float:
     """Confidence grows with observation depth, regularity and low volatility."""
-    depth = min(features["months_observed"] / 6.0, 1.0)          # 6+ months is ideal
+    depth = min(features["months_observed"] / 6.0, 1.0)  # 6+ months is ideal
     regularity = features["salary_regularity"]
     stability = max(0.0, 1 - features["income_volatility"])
     base = 0.45 * depth + 0.30 * regularity + 0.25 * stability

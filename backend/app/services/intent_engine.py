@@ -5,6 +5,7 @@ days. Uses an XGBoost classifier when the trained artifact exists;
 otherwise a calibrated logistic rule over behavioural signals. Emits
 human-readable reason codes for the sales team.
 """
+
 import math
 
 from app.core.logging import logger
@@ -14,15 +15,15 @@ from app.services.feature_engineering import to_vector
 
 # (feature, weight, threshold-normalizer, reason code shown to RM)
 INTENT_SIGNALS = [
-    ("loan_enquiry_count",       0.90, 2.0,  "Recent loan/bureau enquiry fees detected"),
-    ("property_payment_flag",    0.85, 1.0,  "Property-related payments (token/registration) observed"),
-    ("vehicle_payment_flag",     0.70, 1.0,  "Vehicle booking/showroom payments observed"),
-    ("wedding_expense_flag",     0.60, 1.0,  "Wedding-related spends indicate upcoming expenses"),
-    ("education_payment_flag",   0.45, 1.0,  "Education fee payments observed"),
-    ("high_value_purchase_count",0.50, 3.0,  "Multiple high-value purchases in recent months"),
-    ("salary_growth_rate",       0.40, 0.15, "Salary is growing — upgrade purchases likely"),
-    ("savings_growth_rate",      0.35, 0.20, "Savings build-up suggests planned big-ticket spend"),
-    ("existing_debt_ratio",      0.30, 0.40, "Existing EMIs — possible consolidation/top-up need"),
+    ("loan_enquiry_count", 0.90, 2.0, "Recent loan/bureau enquiry fees detected"),
+    ("property_payment_flag", 0.85, 1.0, "Property-related payments (token/registration) observed"),
+    ("vehicle_payment_flag", 0.70, 1.0, "Vehicle booking/showroom payments observed"),
+    ("wedding_expense_flag", 0.60, 1.0, "Wedding-related spends indicate upcoming expenses"),
+    ("education_payment_flag", 0.45, 1.0, "Education fee payments observed"),
+    ("high_value_purchase_count", 0.50, 3.0, "Multiple high-value purchases in recent months"),
+    ("salary_growth_rate", 0.40, 0.15, "Salary is growing — upgrade purchases likely"),
+    ("savings_growth_rate", 0.35, 0.20, "Savings build-up suggests planned big-ticket spend"),
+    ("existing_debt_ratio", 0.30, 0.40, "Existing EMIs — possible consolidation/top-up need"),
 ]
 
 

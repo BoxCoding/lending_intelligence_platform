@@ -1,4 +1,5 @@
 """Recommendation, chat (LLM advisor) and what-if simulation endpoints."""
+
 from fastapi import APIRouter, HTTPException
 
 from app.db.store import store
@@ -20,7 +21,9 @@ router = APIRouter(tags=["Insights"])
 def recommend(req: CustomerIdRequest):
     profile = get_profile(req.customer_id)
     if not profile or not profile.get("recommendation"):
-        raise HTTPException(status_code=404, detail="Customer not scored yet. Upload AA data first.")
+        raise HTTPException(
+            status_code=404, detail="Customer not scored yet. Upload AA data first."
+        )
     return profile["recommendation"]
 
 
@@ -49,8 +52,10 @@ def what_if(req: WhatIfRequest):
         - new_emi
         - req.extra_monthly_expense
     )
-    verdict = "AFFORDABLE" if foir <= 0.55 and disposable_after > 0 else (
-        "STRETCHED" if foir <= 0.65 else "NOT_AFFORDABLE"
+    verdict = (
+        "AFFORDABLE"
+        if foir <= 0.55 and disposable_after > 0
+        else ("STRETCHED" if foir <= 0.65 else "NOT_AFFORDABLE")
     )
     return {
         "monthly_emi": round(new_emi, 0),

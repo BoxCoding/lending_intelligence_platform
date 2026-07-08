@@ -1,7 +1,15 @@
 "use client";
 /** Minimal shadcn-style primitives used across pages. */
 
-export function Stat({ label, value, accent }: { label: string; value: string | number; accent?: string }) {
+export function Stat({
+  label,
+  value,
+  accent,
+}: {
+  label: string;
+  value: string | number;
+  accent?: string;
+}) {
   return (
     <div className="card">
       <p className="text-xs uppercase tracking-wide text-muted">{label}</p>
@@ -10,8 +18,14 @@ export function Stat({ label, value, accent }: { label: string; value: string | 
   );
 }
 
-export function Section({ title, children, right }: {
-  title: string; children: React.ReactNode; right?: React.ReactNode;
+export function Section({
+  title,
+  children,
+  right,
+}: {
+  title: string;
+  children: React.ReactNode;
+  right?: React.ReactNode;
 }) {
   return (
     <section className="card">
@@ -24,18 +38,42 @@ export function Section({ title, children, right }: {
   );
 }
 
-export function Meter({ value, max = 100, color = "bg-primary" }: { value: number; max?: number; color?: string }) {
+export function Meter({
+  value,
+  max = 100,
+  color = "bg-primary",
+}: {
+  value: number;
+  max?: number;
+  color?: string;
+}) {
   return (
-    <div className="h-2 w-full rounded-full bg-border">
-      <div className={`h-2 rounded-full ${color}`} style={{ width: `${Math.min(100, (value / max) * 100)}%` }} />
+    <div
+      className="h-2 w-full rounded-full bg-border"
+      role="progressbar"
+      aria-valuenow={Math.round(value)}
+      aria-valuemin={0}
+      aria-valuemax={max}
+    >
+      <div
+        className={`h-2 rounded-full ${color}`}
+        style={{ width: `${Math.min(100, (value / max) * 100)}%` }}
+      />
     </div>
   );
 }
 
 export function Spinner({ label = "Loading…" }: { label?: string }) {
   return (
-    <div className="flex items-center gap-3 py-16 justify-center text-muted">
-      <span className="h-5 w-5 animate-spin rounded-full border-2 border-primary border-t-transparent" />
+    <div
+      role="status"
+      aria-live="polite"
+      className="flex items-center justify-center gap-3 py-16 text-muted"
+    >
+      <span
+        className="h-5 w-5 animate-spin rounded-full border-2 border-primary border-t-transparent"
+        aria-hidden="true"
+      />
       {label}
     </div>
   );
@@ -43,10 +81,13 @@ export function Spinner({ label = "Loading…" }: { label?: string }) {
 
 export function ErrorBox({ error }: { error: Error }) {
   return (
-    <div className="card border-hot/40 text-sm">
+    <div role="alert" className="card border-hot/40 text-sm">
       <p className="font-semibold text-hot">Backend unreachable</p>
       <p className="mt-1 text-muted">{error.message}</p>
-      <p className="mt-2 text-muted">Start it with: <code className="rounded bg-surface px-1">uvicorn app.main:app --reload</code></p>
+      <p className="mt-2 text-muted">
+        Start it with:{" "}
+        <code className="rounded bg-surface px-1">uvicorn app.main:app --reload</code>
+      </p>
     </div>
   );
 }

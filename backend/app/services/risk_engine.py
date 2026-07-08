@@ -4,6 +4,7 @@ Estimates probability of default (PD), assigns a risk grade, flags fraud
 indicators, and scores financial/behavioural stability and liquidity risk.
 Uses trained classifier when available, else a calibrated scorecard.
 """
+
 import math
 
 from app.core.logging import logger
@@ -46,15 +47,15 @@ def assess_risk(features: dict[str, float]) -> RiskAssessment:
 def _scorecard_pd(f: dict[str, float]) -> float:
     """Logistic scorecard over the strongest default drivers."""
     logit = -3.2
-    logit += 2.2 * min(f["existing_debt_ratio"], 1.0)          # leverage
-    logit += 1.6 * min(f["income_volatility"], 1.5)            # unstable income
-    logit -= 1.4 * f["salary_regularity"]                      # regular salary protects
-    logit -= 1.2 * min(max(f["savings_rate"], 0.0), 0.6)       # savings buffer
+    logit += 2.2 * min(f["existing_debt_ratio"], 1.0)  # leverage
+    logit += 1.6 * min(f["income_volatility"], 1.5)  # unstable income
+    logit -= 1.4 * f["salary_regularity"]  # regular salary protects
+    logit -= 1.2 * min(max(f["savings_rate"], 0.0), 0.6)  # savings buffer
     logit -= 0.8 * min(f["avg_balance"] / max(f["avg_monthly_income"], 1.0), 3.0) / 3.0
-    logit += 1.5 * f["bounce_indicator"]                       # negative balance events
-    logit += 0.9 * min(f["cash_withdrawal_ratio"], 1.0)        # cash-heavy behaviour
-    logit += 0.5 * min(f["discretionary_ratio"], 1.0)          # lifestyle burn
-    logit -= 0.4 * min(f["months_observed"] / 12.0, 1.0)       # longer history derisks
+    logit += 1.5 * f["bounce_indicator"]  # negative balance events
+    logit += 0.9 * min(f["cash_withdrawal_ratio"], 1.0)  # cash-heavy behaviour
+    logit += 0.5 * min(f["discretionary_ratio"], 1.0)  # lifestyle burn
+    logit -= 0.4 * min(f["months_observed"] / 12.0, 1.0)  # longer history derisks
     return 1 / (1 + math.exp(-logit))
 
 

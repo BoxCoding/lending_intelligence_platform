@@ -13,9 +13,16 @@ interface ModelMetrics {
 }
 
 const METRIC_LABELS: Record<string, string> = {
-  rmse: "RMSE (₹)", mae: "MAE (₹)", mape: "MAPE",
-  auc: "AUC", precision: "Precision", recall: "Recall", f1: "F1",
-  roc_auc: "ROC-AUC", ks: "KS", gini: "Gini",
+  rmse: "RMSE (₹)",
+  mae: "MAE (₹)",
+  mape: "MAPE",
+  auc: "AUC",
+  precision: "Precision",
+  recall: "Recall",
+  f1: "F1",
+  roc_auc: "ROC-AUC",
+  ks: "KS",
+  gini: "Gini",
 };
 
 const MODEL_TITLES: Record<string, string> = {
@@ -58,18 +65,38 @@ export default function Analytics() {
 
       <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
         <Stat label="Scored Customers" value={kpis.total_leads} />
-        <Stat label="Predicted Conv. Rate" value={`${kpis.predicted_conversion_rate}%`} accent="text-success" />
-        <Stat label="Train / Test Split" value={metrics.data ? `${metrics.data.n_train} / ${metrics.data.n_test}` : "—"} />
-        <Stat label="Models Live" value={metrics.data ? Object.values(metrics.data.loaded).filter(Boolean).length + " / 3" : "—"} accent="text-primary-foreground" />
+        <Stat
+          label="Predicted Conv. Rate"
+          value={`${kpis.predicted_conversion_rate}%`}
+          accent="text-success"
+        />
+        <Stat
+          label="Train / Test Split"
+          value={metrics.data ? `${metrics.data.n_train} / ${metrics.data.n_test}` : "—"}
+        />
+        <Stat
+          label="Models Live"
+          value={
+            metrics.data ? Object.values(metrics.data.loaded).filter(Boolean).length + " / 3" : "—"
+          }
+          accent="text-primary"
+        />
       </div>
 
       {metrics.data && (
         <div className="grid gap-4 lg:grid-cols-3">
           {Object.entries(metrics.data.models).map(([name, vals]) => (
-            <Section key={name} title={MODEL_TITLES[name] ?? name}
-              right={<span className={`badge ${metrics.data!.loaded[name] ? "bg-success/15 text-success" : "bg-warm/15 text-warm"}`}>
-                {metrics.data!.loaded[name] ? "serving" : "rules fallback"}
-              </span>}>
+            <Section
+              key={name}
+              title={MODEL_TITLES[name] ?? name}
+              right={
+                <span
+                  className={`badge ${metrics.data!.loaded[name] ? "bg-success/15 text-success" : "bg-warm/15 text-warm"}`}
+                >
+                  {metrics.data!.loaded[name] ? "serving" : "rules fallback"}
+                </span>
+              }
+            >
               <div className="space-y-2 text-sm">
                 {Object.entries(vals).map(([k, v]) => (
                   <div key={k} className="flex justify-between border-b border-border/50 pb-2">
@@ -83,14 +110,24 @@ export default function Analytics() {
         </div>
       )}
       {metrics.error && (
-        <p className="card text-sm text-warm">Model metrics unavailable: train models via <code>ml/train.py</code>.</p>
+        <p className="card text-sm text-warm">
+          Model metrics unavailable: train models via <code>ml/train.py</code>.
+        </p>
       )}
 
       <div className="grid gap-4 lg:grid-cols-2">
-        <Section title="Intent Distribution"><SimpleBar data={charts.intent_distribution ?? []} x="bucket" y="count" color="#f59e0b" /></Section>
-        <Section title="Risk Grade Distribution"><SimpleBar data={charts.risk_distribution ?? []} x="grade" y="count" color="#f43f5e" /></Section>
-        <Section title="Income Histogram"><SimpleBar data={charts.income_histogram ?? []} x="range" y="count" color="#34d399" /></Section>
-        <Section title="Recommended Loan Mix"><DonutChart data={charts.loan_distribution ?? []} nameKey="product" valueKey="count" /></Section>
+        <Section title="Intent Distribution">
+          <SimpleBar data={charts.intent_distribution ?? []} x="bucket" y="count" color="#d97706" />
+        </Section>
+        <Section title="Risk Grade Distribution">
+          <SimpleBar data={charts.risk_distribution ?? []} x="grade" y="count" color="#e11d48" />
+        </Section>
+        <Section title="Income Histogram">
+          <SimpleBar data={charts.income_histogram ?? []} x="range" y="count" color="#059669" />
+        </Section>
+        <Section title="Recommended Loan Mix">
+          <DonutChart data={charts.loan_distribution ?? []} nameKey="product" valueKey="count" />
+        </Section>
       </div>
     </div>
   );

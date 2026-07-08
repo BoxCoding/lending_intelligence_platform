@@ -17,19 +17,37 @@ const nav = [
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <body>
         <FirebaseAnalytics />
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-primary focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white focus:outline-none focus:ring-2 focus:ring-white"
+        >
+          Skip to main content
+        </a>
         <Providers>
           <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur">
             <div className="mx-auto flex h-14 max-w-7xl items-center gap-6 px-4">
-              <Link href="/" className="flex items-center gap-2 font-bold tracking-tight">
-                <span className="grid h-7 w-7 place-items-center rounded-lg bg-primary text-sm">₹</span>
+              <Link
+                href="/"
+                className="flex items-center gap-2 rounded font-bold tracking-tight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              >
+                <span
+                  className="grid h-7 w-7 place-items-center rounded-lg bg-primary text-sm"
+                  aria-hidden="true"
+                >
+                  ₹
+                </span>
                 LendIQ
               </Link>
-              <nav className="flex gap-4 text-sm text-muted">
+              <nav aria-label="Main" className="flex gap-4 text-sm text-muted">
                 {nav.map((n) => (
-                  <Link key={n.href} href={n.href} className="transition hover:text-zinc-100">
+                  <Link
+                    key={n.href}
+                    href={n.href}
+                    className="rounded transition hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                  >
                     {n.label}
                   </Link>
                 ))}
@@ -39,7 +57,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </span>
             </div>
           </header>
-          <main className="mx-auto max-w-7xl px-4 py-6">{children}</main>
+          <main
+            id="main-content"
+            tabIndex={-1}
+            className="mx-auto max-w-7xl px-4 py-6 outline-none"
+          >
+            {children}
+          </main>
         </Providers>
       </body>
     </html>

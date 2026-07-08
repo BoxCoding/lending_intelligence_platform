@@ -4,11 +4,11 @@ Answers underwriter / customer questions grounded in the computed profile.
 Uses Gemini when GEMINI_API_KEY is configured; otherwise a deterministic
 template advisor so the demo works fully offline.
 """
+
 import json
 
 from app.core.config import get_settings
 from app.core.logging import logger
-
 
 SYSTEM_PROMPT = """You are LendIQ Advisor, an expert retail-lending underwriting assistant
 for an Indian bank. You are given a customer's AI-computed financial profile derived from
@@ -34,12 +34,21 @@ def _gemini_chat(message: str, profile: dict | None, history: list[dict], settin
     from google.genai import types
 
     client = genai.Client(api_key=settings.gemini_api_key)
-    context = f"CUSTOMER PROFILE:\n{json.dumps(profile, indent=2, default=str)}" if profile else "No customer selected."
+    context = (
+        f"CUSTOMER PROFILE:\n{json.dumps(profile, indent=2, default=str)}"
+        if profile
+        else "No customer selected."
+    )
     contents = []
     for turn in history[-6:]:
-        contents.append(types.Content(role=turn.get("role", "user"),
-                                      parts=[types.Part(text=turn.get("content", ""))]))
-    contents.append(types.Content(role="user", parts=[types.Part(text=f"{context}\n\nQUESTION: {message}")]))
+        contents.append(
+            types.Content(
+                role=turn.get("role", "user"), parts=[types.Part(text=turn.get("content", ""))]
+            )
+        )
+    contents.append(
+        types.Content(role="user", parts=[types.Part(text=f"{context}\n\nQUESTION: {message}")])
+    )
     response = client.models.generate_content(
         model=settings.gemini_model,
         contents=contents,
@@ -107,7 +116,9 @@ def _offline_chat(message: str, profile: dict | None) -> dict:
         reply = (
             f"**Lead score for {name}: {lead.get('score', 0)}/100 → {lead.get('tier', '?')}**\n"
             f"- Conversion probability: {lead.get('conversion_probability', 0):.0%}\n"
-            f"- Components: " + ", ".join(f"{k} {v}" for k, v in (lead.get('components') or {}).items()) + "\n"
+            f"- Components: "
+            + ", ".join(f"{k} {v}" for k, v in (lead.get("components") or {}).items())
+            + "\n"
             f"- Intent (90d): {intent.get('intent_score', 0)}/100 — "
             + "; ".join((intent.get("reason_codes") or [])[:3])
         )
@@ -119,7 +130,9 @@ def _offline_chat(message: str, profile: dict | None) -> dict:
             f"EMI ≈ ₹{o['monthly_emi']:,.0f}. Why: {o['reasons'][0] if o['reasons'] else ''}"
             for o in offers
         ]
-        reply = f"**Recommended products for {name}**\n" + ("\n".join(lines) if lines else "No qualifying offers.")
+        reply = f"**Recommended products for {name}**\n" + (
+            "\n".join(lines) if lines else "No qualifying offers."
+        )
     else:
         reply = (
             f"**Summary for {name}**\n{reco.get('summary', '')}\n"
@@ -127,7 +140,11 @@ def _offline_chat(message: str, profile: dict | None) -> dict:
             f"- Lead: {lead.get('tier', '?')} ({lead.get('score', 0)}/100) | Risk grade {risk.get('risk_grade', '?')}\n"
             f"Ask me about income, repayment capacity, risk, lead score, or recommendations."
         )
-    return {"reply": reply, "sources": ["offline_advisor", "customer_profile"], "suggestions": _suggestions(profile)}
+    return {
+        "reply": reply,
+        "sources": ["offline_advisor", "customer_profile"],
+        "suggestions": _suggestions(profile),
+    }
 
 
 def _suggestions(profile: dict | None) -> list[str]:

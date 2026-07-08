@@ -2,19 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-:root { color-scheme: dark; }
+:root {
+  color-scheme: light;
+}
 
 body {
-  @apply bg-background text-zinc-100 antialiased;
+  @apply bg-background text-foreground antialiased;
+}
+
+/* Baseline visible focus indicator (WCAG 2.4.7) for every interactive
+   element that doesn't already define its own focus-visible ring. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid theme("colors.primary.DEFAULT");
+  outline-offset: 2px;
 }
 
 .card {
-  @apply rounded-xl border border-border bg-card p-5 shadow-lg shadow-black/20;
+  @apply rounded-xl border border-border bg-card p-5 shadow-sm shadow-slate-200/70;
 }
 
 .badge {
   @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold;
 }
 
-::-webkit-scrollbar { width: 8px; height: 8px; }
-::-webkit-scrollbar-thumb { @apply bg-border rounded; }
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-border rounded;
+}

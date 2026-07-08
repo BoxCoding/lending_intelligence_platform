@@ -4,6 +4,7 @@ Matches customer signals to loan products, sizes the offer within
 repayment capacity, prices by risk grade, and produces reason strings
 for every recommendation.
 """
+
 from app.schemas.models import (
     BorrowingIntent,
     IncomeEstimate,
@@ -122,7 +123,9 @@ def _offer_reasons(product, f, income, repayment, risk) -> list[str]:
     reasons.append(
         f"EMI headroom ₹{repayment.eligible_emi:,.0f}/mo at FOIR ≤55%, risk grade {risk.risk_grade}"
     )
-    reasons.append(f"Income estimated at ₹{income.monthly_income:,.0f}/mo (confidence {income.confidence:.0%})")
+    reasons.append(
+        f"Income estimated at ₹{income.monthly_income:,.0f}/mo (confidence {income.confidence:.0%})"
+    )
     return reasons[:4]
 
 

@@ -13,16 +13,16 @@ graph runs fully offline too.
 Usage:
     python loan_advisor_graph.py CUST00001 "Should we offer a home loan?"
 """
+
 import sys
 from pathlib import Path
 from typing import Literal, TypedDict
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "backend"))
 
-from langgraph.graph import END, StateGraph
-
 from app.services import llm_advisor
 from app.services.pipeline import get_profile
+from langgraph.graph import END, StateGraph
 
 
 class AgentState(TypedDict, total=False):
@@ -43,8 +43,17 @@ def fetch_profile(state: AgentState) -> AgentState:
 def analyze_intent(state: AgentState) -> AgentState:
     """Classify the question: underwriting decision vs. general advice."""
     q = state["question"].lower()
-    underwrite_keywords = ("approve", "underwrit", "sanction", "offer", "eligib",
-                           "should we", "decision", "risk", "lend")
+    underwrite_keywords = (
+        "approve",
+        "underwrit",
+        "sanction",
+        "offer",
+        "eligib",
+        "should we",
+        "decision",
+        "risk",
+        "lend",
+    )
     route = "underwrite" if any(k in q for k in underwrite_keywords) else "advise"
     return {"route": route}
 
@@ -64,14 +73,22 @@ def underwrite(state: AgentState) -> AgentState:
     ]
     passed = sum(1 for _, ok in checks if ok)
     decision = "APPROVE" if passed == len(checks) else "REFER" if passed >= 3 else "DECLINE"
-    return {"analysis": {"decision": decision,
-                         "checks": [{"check": c, "passed": ok} for c, ok in checks]}}
+    return {
+        "analysis": {
+            "decision": decision,
+            "checks": [{"check": c, "passed": ok} for c, ok in checks],
+        }
+    }
 
 
 def advise(state: AgentState) -> AgentState:
     p = state.get("profile") or {}
-    return {"analysis": {"decision": "ADVISORY",
-                         "highlights": (p.get("recommendation") or {}).get("summary", "")}}
+    return {
+        "analysis": {
+            "decision": "ADVISORY",
+            "highlights": (p.get("recommendation") or {}).get("summary", ""),
+        }
+    }
 
 
 def compose(state: AgentState) -> AgentState:
@@ -80,8 +97,9 @@ def compose(state: AgentState) -> AgentState:
     prefix = ""
     if analysis.get("decision") in ("APPROVE", "REFER", "DECLINE"):
         failed = [c["check"] for c in analysis.get("checks", []) if not c["passed"]]
-        prefix = (f"UNDERWRITING DECISION: {analysis['decision']}."
-                  + (f" Failed checks: {', '.join(failed)}." if failed else " All checks passed."))
+        prefix = f"UNDERWRITING DECISION: {analysis['decision']}." + (
+            f" Failed checks: {', '.join(failed)}." if failed else " All checks passed."
+        )
     result = llm_advisor.chat(f"{prefix}\n{state['question']}", state.get("profile"), [])
     answer = (prefix + "\n\n" if prefix else "") + result["reply"]
     return {"answer": answer}
@@ -102,8 +120,9 @@ def build_graph():
 
     graph.set_entry_point("fetch_profile")
     graph.add_edge("fetch_profile", "analyze_intent")
-    graph.add_conditional_edges("analyze_intent", route_decision,
-                                {"underwrite": "underwrite", "advise": "advise"})
+    graph.add_conditional_edges(
+        "analyze_intent", route_decision, {"underwrite": "underwrite", "advise": "advise"}
+    )
     graph.add_edge("underwrite", "compose")
     graph.add_edge("advise", "compose")
     graph.add_edge("compose", END)

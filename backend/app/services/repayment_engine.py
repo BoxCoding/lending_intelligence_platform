@@ -3,6 +3,7 @@
 Computes FOIR, DTI, eligible EMI headroom and translates it into a
 maximum loan capacity per product using standard EMI mathematics.
 """
+
 from app.core.config import get_settings
 from app.schemas.models import IncomeEstimate, RepaymentCapacity
 
@@ -68,7 +69,7 @@ def assess_repayment(features: dict[str, float], income: IncomeEstimate) -> Repa
 
 def _affordability_score(foir: float, income: IncomeEstimate, features: dict) -> float:
     """0-100 score: how comfortably can this customer absorb a new EMI."""
-    foir_component = max(0.0, 1 - foir / 0.55) * 40          # low obligations
+    foir_component = max(0.0, 1 - foir / 0.55) * 40  # low obligations
     savings_component = max(0.0, min(income.savings_rate, 0.5)) / 0.5 * 25
     stability_component = income.cash_flow_stability * 20
     balance_component = min(features["avg_balance"] / max(income.monthly_income, 1) / 2, 1.0) * 15

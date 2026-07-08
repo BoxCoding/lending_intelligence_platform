@@ -4,6 +4,7 @@ Computes per-prediction SHAP values for the trained tree models. Falls
 back to scorecard weight attribution when SHAP or the model artifact is
 unavailable, so the API contract never breaks.
 """
+
 from app.core.logging import logger
 from app.ml_registry import registry
 from app.schemas.models import Explanation, ShapDriver
@@ -55,7 +56,9 @@ def explain_prediction(model_name: str, features: dict[str, float]) -> Explanati
     return _build(model_name, vector, pseudo, confidence=0.55)
 
 
-def _build(model_name: str, vector: list[float], impacts: list[float], confidence: float) -> Explanation:
+def _build(
+    model_name: str, vector: list[float], impacts: list[float], confidence: float
+) -> Explanation:
     drivers = [
         ShapDriver(
             feature=_FRIENDLY.get(name, name.replace("_", " ").title()),
@@ -63,7 +66,7 @@ def _build(model_name: str, vector: list[float], impacts: list[float], confidenc
             impact=round(float(impact), 4),
             direction="positive" if impact >= 0 else "negative",
         )
-        for name, val, impact in zip(FEATURE_NAMES, vector, impacts)
+        for name, val, impact in zip(FEATURE_NAMES, vector, impacts, strict=True)
     ]
     drivers.sort(key=lambda d: abs(d.impact), reverse=True)
     top = drivers[:8]

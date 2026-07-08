@@ -1,0 +1,46 @@
+[project]
+name = "lendiq"
+version = "1.0.0"
+description = "LendIQ — AI-powered Retail Lending Intelligence Platform: Account Aggregator data turned into pre-qualified, explainable loan leads."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "Proprietary" }
+authors = [{ name = "Team Quantry" }]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = [".venv", "node_modules", "ml/models", "data", "pitch-deck"]
+
+[tool.ruff.lint]
+select = [
+  "E",   # pycodestyle errors
+  "F",   # pyflakes
+  "W",   # pycodestyle warnings
+  "I",   # isort
+  "UP",  # pyupgrade
+  "B",   # flake8-bugbear
+  "SIM", # flake8-simplify
+  "C4",  # flake8-comprehensions
+]
+ignore = [
+  "E501", # line length handled by formatter; a few long f-strings are clearer unwrapped
+]
+
+[tool.ruff.lint.per-file-ignores]
+"ml/data_generator.py" = ["B008"]  # synthetic data generation uses default-arg RNG patterns intentionally
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.pytest.ini_options]
+testpaths = ["backend/tests"]
+pythonpath = ["backend"]
+
+[tool.coverage.run]
+source = ["backend/app"]
+omit = ["backend/app/main.py"]
+
+[tool.coverage.report]
+precision = 1
+show_missing = true

@@ -1,4 +1,5 @@
 """Per-engine prediction endpoints. Each reads the persisted feature vector."""
+
 from fastapi import APIRouter, HTTPException
 
 from app.db.store import store
@@ -21,7 +22,9 @@ router = APIRouter(prefix="/predict", tags=["Predictions"])
 def _features_or_404(customer_id: str) -> dict:
     features = store.get("features", customer_id)
     if not features:
-        raise HTTPException(status_code=404, detail=f"No features for customer {customer_id}. Upload AA data first.")
+        raise HTTPException(
+            status_code=404, detail=f"No features for customer {customer_id}. Upload AA data first."
+        )
     return features
 
 

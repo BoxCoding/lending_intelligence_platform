@@ -12,10 +12,11 @@ Artifacts + metrics registry are written to ml/models/.
 Usage:
     python train.py --data ../data/samples
 """
+
 import argparse
 import json
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 import joblib
@@ -23,6 +24,9 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "backend"))
 
+from app.schemas.models import AAPayload
+from app.services.aa_parser import parse_aa_payload
+from app.services.feature_engineering import FEATURE_NAMES, build_features, to_vector
 from sklearn.metrics import (
     f1_score,
     mean_absolute_error,
@@ -34,14 +38,10 @@ from sklearn.metrics import (
 )
 from sklearn.model_selection import train_test_split
 
-from app.schemas.models import AAPayload
-from app.services.aa_parser import parse_aa_payload
-from app.services.feature_engineering import FEATURE_NAMES, build_features, to_vector
-
 
 def build_dataset(data_dir: Path):
     payloads = json.loads((data_dir / "aa_payloads.json").read_text())
-    labels = {l["customer_id"]: l for l in json.loads((data_dir / "labels.json").read_text())}
+    labels = {row["customer_id"]: row for row in json.loads((data_dir / "labels.json").read_text())}
     X, y_income, y_intent, y_default = [], [], [], []
     for raw in payloads:
         parsed = parse_aa_payload(AAPayload(**raw))
@@ -65,8 +65,15 @@ def ks_statistic(y_true, y_prob) -> float:
 def train_income(X_tr, X_te, y_tr, y_te):
     from lightgbm import LGBMRegressor
 
-    model = LGBMRegressor(n_estimators=400, learning_rate=0.05, num_leaves=31,
-                          subsample=0.9, colsample_bytree=0.8, random_state=42, verbose=-1)
+    model = LGBMRegressor(
+        n_estimators=400,
+        learning_rate=0.05,
+        num_leaves=31,
+        subsample=0.9,
+        colsample_bytree=0.8,
+        random_state=42,
+        verbose=-1,
+    )
     model.fit(X_tr, y_tr, feature_name=FEATURE_NAMES)
     pred = model.predict(X_te)
     return model, {
@@ -79,9 +86,15 @@ def train_income(X_tr, X_te, y_tr, y_te):
 def train_intent(X_tr, X_te, y_tr, y_te):
     from xgboost import XGBClassifier
 
-    model = XGBClassifier(n_estimators=300, learning_rate=0.06, max_depth=4,
-                          subsample=0.9, colsample_bytree=0.8, eval_metric="auc",
-                          random_state=42)
+    model = XGBClassifier(
+        n_estimators=300,
+        learning_rate=0.06,
+        max_depth=4,
+        subsample=0.9,
+        colsample_bytree=0.8,
+        eval_metric="auc",
+        random_state=42,
+    )
     model.fit(X_tr, y_tr)
     prob = model.predict_proba(X_te)[:, 1]
     pred = (prob >= 0.5).astype(int)
@@ -96,9 +109,15 @@ def train_intent(X_tr, X_te, y_tr, y_te):
 def train_risk(X_tr, X_te, y_tr, y_te):
     from lightgbm import LGBMClassifier
 
-    model = LGBMClassifier(n_estimators=300, learning_rate=0.05, num_leaves=31,
-                           subsample=0.9, colsample_bytree=0.8, random_state=42,
-                           verbose=-1)
+    model = LGBMClassifier(
+        n_estimators=300,
+        learning_rate=0.05,
+        num_leaves=31,
+        subsample=0.9,
+        colsample_bytree=0.8,
+        random_state=42,
+        verbose=-1,
+    )
     model.fit(X_tr, y_tr, feature_name=FEATURE_NAMES)
     prob = model.predict_proba(X_te)[:, 1]
     auc = float(roc_auc_score(y_te, prob))
@@ -119,15 +138,22 @@ def main():
     X, y_income, y_intent, y_default = build_dataset(data_dir)
     print(f"Dataset: {X.shape[0]} customers x {X.shape[1]} features")
 
-    idx_tr, idx_te = train_test_split(np.arange(len(X)), test_size=0.25, random_state=42,
-                                      stratify=y_default)
-    metrics_registry = {"trained_at": datetime.now(timezone.utc).isoformat(),
-                        "n_train": len(idx_tr), "n_test": len(idx_te),
-                        "features": FEATURE_NAMES, "models": {}}
+    idx_tr, idx_te = train_test_split(
+        np.arange(len(X)), test_size=0.25, random_state=42, stratify=y_default
+    )
+    metrics_registry = {
+        "trained_at": datetime.now(UTC).isoformat(),
+        "n_train": len(idx_tr),
+        "n_test": len(idx_te),
+        "features": FEATURE_NAMES,
+        "models": {},
+    }
 
-    for name, trainer, y in [("income", train_income, y_income),
-                             ("intent", train_intent, y_intent),
-                             ("risk", train_risk, y_default)]:
+    for name, trainer, y in [
+        ("income", train_income, y_income),
+        ("intent", train_intent, y_intent),
+        ("risk", train_risk, y_default),
+    ]:
         model, metrics = trainer(X[idx_tr], X[idx_te], y[idx_tr], y[idx_te])
         joblib.dump(model, out_dir / f"{name}_model.joblib")
         metrics_registry["models"][name] = metrics

@@ -4,6 +4,7 @@ Fuses income quality, borrowing intent, repayment capacity, risk and
 transaction behaviour into a single 0-100 lead score with HOT/WARM/COLD
 tiers and a calibrated conversion probability.
 """
+
 from app.core.config import get_settings
 from app.schemas.models import (
     BorrowingIntent,

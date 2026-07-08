@@ -20,7 +20,9 @@ function Chat() {
   const [messages, setMessages] = useState<ChatTurn[]>([]);
   const [input, setInput] = useState("");
   const [suggestions, setSuggestions] = useState<string[]>([
-    "Explain the income estimation", "What loan products fit best?", "Any fraud indicators?",
+    "Explain the income estimation",
+    "What loan products fit best?",
+    "Any fraud indicators?",
   ]);
   const bottomRef = useRef<HTMLDivElement>(null);
 
@@ -48,48 +50,95 @@ function Chat() {
     <div className="mx-auto flex h-[calc(100vh-8rem)] max-w-3xl flex-col">
       <div className="mb-3 flex items-center gap-3">
         <h1 className="text-xl font-bold">AI Financial Advisor</h1>
-        <select value={customerId} onChange={(e) => { setCustomerId(e.target.value); setMessages([]); }}
-          className="ml-auto rounded-lg border border-border bg-surface px-3 py-1.5 text-sm outline-none focus:border-primary">
+        <label htmlFor="customer-context" className="sr-only">
+          Customer context for the advisor
+        </label>
+        <select
+          id="customer-context"
+          value={customerId}
+          onChange={(e) => {
+            setCustomerId(e.target.value);
+            setMessages([]);
+          }}
+          className="ml-auto rounded-lg border border-border bg-surface px-3 py-1.5 text-sm outline-none focus-visible:ring-2 focus-visible:ring-primary"
+        >
           <option value="">No customer context</option>
           {dash?.leads.map((l) => (
-            <option key={l.customer_id} value={l.customer_id}>{l.name} ({l.customer_id})</option>
+            <option key={l.customer_id} value={l.customer_id}>
+              {l.name} ({l.customer_id})
+            </option>
           ))}
         </select>
       </div>
 
-      <div className="card flex-1 space-y-4 overflow-y-auto">
+      <div
+        className="card flex-1 space-y-4 overflow-y-auto"
+        role="log"
+        aria-live="polite"
+        aria-label="Conversation with the AI advisor"
+      >
         {messages.length === 0 && (
           <p className="py-10 text-center text-sm text-muted">
-            Ask about income estimation, repayment capacity, lead scores, risk, or loan recommendations.
+            Ask about income estimation, repayment capacity, lead scores, risk, or loan
+            recommendations.
             {customerId ? ` Context: ${customerId}` : " Select a customer for grounded answers."}
           </p>
         )}
         {messages.map((m, i) => (
-          <div key={i} className={`max-w-[85%] whitespace-pre-wrap rounded-xl px-4 py-3 text-sm leading-relaxed ${
-            m.role === "user" ? "ml-auto bg-primary/20" : "bg-surface"
-          }`}>
+          <div
+            key={i}
+            className={`max-w-[85%] whitespace-pre-wrap rounded-xl px-4 py-3 text-sm leading-relaxed ${
+              m.role === "user" ? "ml-auto bg-primary/20" : "bg-surface"
+            }`}
+          >
+            <span className="sr-only">{m.role === "user" ? "You said: " : "Advisor said: "}</span>
             {m.content}
           </div>
         ))}
-        {mutation.isPending && <p className="animate-pulse text-sm text-muted">Advisor is thinking…</p>}
+        {mutation.isPending && (
+          <p role="status" className="animate-pulse text-sm text-muted">
+            Advisor is thinking…
+          </p>
+        )}
         <div ref={bottomRef} />
       </div>
 
-      <div className="mt-3 flex flex-wrap gap-2">
+      <div className="mt-3 flex flex-wrap gap-2" aria-label="Suggested questions">
         {suggestions.map((s) => (
-          <button key={s} onClick={() => send(s)}
-            className="rounded-full border border-border px-3 py-1 text-xs text-muted transition hover:border-primary hover:text-zinc-100">
+          <button
+            key={s}
+            onClick={() => send(s)}
+            className="rounded-full border border-border px-3 py-1 text-xs text-muted transition hover:border-primary hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+          >
             {s}
           </button>
         ))}
       </div>
 
-      <form onSubmit={(e) => { e.preventDefault(); send(input); }} className="mt-3 flex gap-2">
-        <input value={input} onChange={(e) => setInput(e.target.value)} placeholder="Ask the advisor…"
-          className="flex-1 rounded-lg border border-border bg-surface px-4 py-3 text-sm outline-none focus:border-primary" />
-        <button type="submit" disabled={mutation.isPending}
-          className="rounded-lg bg-primary px-4 font-semibold transition hover:bg-primary/85 disabled:opacity-50">
-          <Send size={18} />
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          send(input);
+        }}
+        className="mt-3 flex gap-2"
+      >
+        <label htmlFor="chat-input" className="sr-only">
+          Ask the advisor a question
+        </label>
+        <input
+          id="chat-input"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          placeholder="Ask the advisor…"
+          className="flex-1 rounded-lg border border-border bg-surface px-4 py-3 text-sm outline-none focus-visible:ring-2 focus-visible:ring-primary"
+        />
+        <button
+          type="submit"
+          disabled={mutation.isPending}
+          aria-label="Send message"
+          className="rounded-lg bg-primary px-4 font-semibold text-white transition hover:bg-primary/85 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+        >
+          <Send size={18} aria-hidden="true" />
         </button>
       </form>
     </div>

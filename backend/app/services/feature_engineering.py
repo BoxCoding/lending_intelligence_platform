@@ -3,6 +3,7 @@
 The same feature builder is used at training time (ml/train.py) and at
 inference time (API), which prevents training/serving skew.
 """
+
 import statistics
 
 from app.services.aa_parser import FIXED_EXPENSE_CATEGORIES, INCOME_CATEGORIES
@@ -83,18 +84,13 @@ def build_features(parsed: dict) -> dict[str, float]:
     n_months = max(len(months), 1)
 
     salary = _monthly_series(monthly, months, "SALARY")
-    income_total = [
-        sum(monthly.get(m, {}).get(c, 0.0) for c in INCOME_CATEGORIES) for m in months
-    ]
+    income_total = [sum(monthly.get(m, {}).get(c, 0.0) for c in INCOME_CATEGORIES) for m in months]
     debits = [meta.get(m, {}).get("debits", 0.0) for m in months]
     balances = [meta.get(m, {}).get("avg_balance", 0.0) for m in months]
     min_balances = [meta.get(m, {}).get("min_balance", 0.0) for m in months]
     txn_counts = [meta.get(m, {}).get("txn_count", 0) for m in months]
 
-    fixed = [
-        sum(monthly.get(m, {}).get(c, 0.0) for c in FIXED_EXPENSE_CATEGORIES)
-        for m in months
-    ]
+    fixed = [sum(monthly.get(m, {}).get(c, 0.0) for c in FIXED_EXPENSE_CATEGORIES) for m in months]
     avg_income = _safe_mean(income_total)
     avg_debits = _safe_mean(debits)
     avg_fixed = _safe_mean(fixed)
@@ -104,7 +100,6 @@ def build_features(parsed: dict) -> dict[str, float]:
     cc = _safe_mean(_monthly_series(monthly, months, "CREDIT_CARD"))
     cash_wdl = _safe_mean(_monthly_series(monthly, months, "CASH_WITHDRAWAL"))
     cash_dep = _safe_mean(_monthly_series(monthly, months, "CASH_DEPOSIT"))
-    upi = _safe_mean(_monthly_series(monthly, months, "UPI_SPEND"))
     invest = _safe_mean(_monthly_series(monthly, months, "INVESTMENT"))
     insurance = _safe_mean(_monthly_series(monthly, months, "INSURANCE"))
     utilities = _safe_mean(_monthly_series(monthly, months, "UTILITIES"))
@@ -122,11 +117,17 @@ def build_features(parsed: dict) -> dict[str, float]:
         for t in parsed["transactions"]
         if t["type"] == "DEBIT"
         and t["amount"] > max(avg_income * 0.4, 50_000)
-        and t["category"] in {"SHOPPING", "OTHER_SPEND", "TRAVEL_FUEL", "VEHICLE_PAYMENT", "PROPERTY_PAYMENT", "WEDDING"}
+        and t["category"]
+        in {
+            "SHOPPING",
+            "OTHER_SPEND",
+            "TRAVEL_FUEL",
+            "VEHICLE_PAYMENT",
+            "PROPERTY_PAYMENT",
+            "WEDDING",
+        }
     )
-    loan_enquiries = sum(
-        1 for t in parsed["transactions"] if t["category"] == "LOAN_ENQUIRY"
-    )
+    loan_enquiries = sum(1 for t in parsed["transactions"] if t["category"] == "LOAN_ENQUIRY")
     upi_txn_count = sum(1 for t in parsed["transactions"] if t["mode"] == "UPI")
 
     features = {
@@ -139,7 +140,9 @@ def build_features(parsed: dict) -> dict[str, float]:
         "variable_expense": variable_expense,
         "avg_balance": avg_balance,
         "min_balance_ratio": (_safe_mean(min_balances) / avg_balance) if avg_balance > 0 else 0.0,
-        "savings_rate": max((avg_income - avg_debits) / avg_income, -1.0) if avg_income > 0 else 0.0,
+        "savings_rate": max((avg_income - avg_debits) / avg_income, -1.0)
+        if avg_income > 0
+        else 0.0,
         "emi_outflow": emi,
         "existing_debt_ratio": (emi + cc) / avg_income if avg_income > 0 else 0.0,
         "credit_card_spend": cc,
@@ -154,13 +157,21 @@ def build_features(parsed: dict) -> dict[str, float]:
         "rent_outflow": rent,
         "salary_growth_rate": _trend(salary),
         "balance_trend": _trend(balances),
-        "property_payment_flag": 1.0 if any(_monthly_series(monthly, months, "PROPERTY_PAYMENT")) else 0.0,
-        "vehicle_payment_flag": 1.0 if any(_monthly_series(monthly, months, "VEHICLE_PAYMENT")) else 0.0,
-        "education_payment_flag": 1.0 if any(_monthly_series(monthly, months, "EDUCATION")) else 0.0,
+        "property_payment_flag": 1.0
+        if any(_monthly_series(monthly, months, "PROPERTY_PAYMENT"))
+        else 0.0,
+        "vehicle_payment_flag": 1.0
+        if any(_monthly_series(monthly, months, "VEHICLE_PAYMENT"))
+        else 0.0,
+        "education_payment_flag": 1.0
+        if any(_monthly_series(monthly, months, "EDUCATION"))
+        else 0.0,
         "wedding_expense_flag": 1.0 if any(_monthly_series(monthly, months, "WEDDING")) else 0.0,
         "loan_enquiry_count": float(loan_enquiries),
         "high_value_purchase_count": float(high_value_purchases),
-        "savings_growth_rate": _trend([max(i - d, 0.0) for i, d in zip(income_total, debits)]),
+        "savings_growth_rate": _trend(
+            [max(i - d, 0.0) for i, d in zip(income_total, debits, strict=True)]
+        ),
         "months_observed": float(n_months),
         "txn_count_monthly": _safe_mean([float(c) for c in txn_counts]),
         "bounce_indicator": 1.0 if any(b < 0 for b in min_balances) else 0.0,

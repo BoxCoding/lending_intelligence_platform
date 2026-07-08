@@ -1,7 +1,6 @@
 """Pydantic data contracts shared across the platform."""
+
 from datetime import datetime
-from enum import Enum
-from typing import Optional
 
 from pydantic import BaseModel, Field
 
@@ -9,13 +8,13 @@ from pydantic import BaseModel, Field
 # ---------------------------------------------------------------- AA payload
 class AATransaction(BaseModel):
     txn_id: str
-    date: str                      # ISO date
-    amount: float                  # positive number
-    type: str                      # CREDIT | DEBIT
-    mode: str = "OTHERS"           # UPI | NEFT | IMPS | ATM | CARD | CASH | ECS
+    date: str  # ISO date
+    amount: float  # positive number
+    type: str  # CREDIT | DEBIT
+    mode: str = "OTHERS"  # UPI | NEFT | IMPS | ATM | CARD | CASH | ECS
     narration: str = ""
-    balance: Optional[float] = None
-    category: Optional[str] = None # optional pre-labelled category
+    balance: float | None = None
+    category: str | None = None  # optional pre-labelled category
 
 
 class AAAccount(BaseModel):
@@ -27,11 +26,12 @@ class AAAccount(BaseModel):
 
 class AAPayload(BaseModel):
     """JSON delivered by the Account Aggregator (FI data pull)."""
+
     customer_id: str
     name: str = "Customer"
-    pan: Optional[str] = None
-    consent_id: Optional[str] = None
-    fetched_at: Optional[str] = None
+    pan: str | None = None
+    consent_id: str | None = None
+    fetched_at: str | None = None
     accounts: list[AAAccount]
 
 
@@ -57,7 +57,7 @@ class RepaymentCapacity(BaseModel):
     foir: float
     surplus_cash: float
     affordability_score: float = Field(ge=0, le=100)
-    loan_capacity: dict[str, float]   # product -> max eligible amount
+    loan_capacity: dict[str, float]  # product -> max eligible amount
 
 
 class IntentWindow(BaseModel):
@@ -74,16 +74,16 @@ class BorrowingIntent(BaseModel):
 
 class RiskAssessment(BaseModel):
     probability_of_default: float = Field(ge=0, le=1)
-    risk_grade: str                   # A / B / C / D / E
+    risk_grade: str  # A / B / C / D / E
     fraud_indicators: list[str]
     financial_stability: float = Field(ge=0, le=100)
     behavior_stability: float = Field(ge=0, le=100)
-    liquidity_risk: str               # LOW / MEDIUM / HIGH
+    liquidity_risk: str  # LOW / MEDIUM / HIGH
 
 
 class LeadScore(BaseModel):
     score: float = Field(ge=0, le=100)
-    tier: str                         # HOT / WARM / COLD
+    tier: str  # HOT / WARM / COLD
     conversion_probability: float
     components: dict[str, float]
     explanation: list[str]
@@ -129,7 +129,7 @@ class CustomerIdRequest(BaseModel):
 
 
 class ChatRequest(BaseModel):
-    customer_id: Optional[str] = None
+    customer_id: str | None = None
     message: str
     history: list[dict] = []
 
@@ -153,10 +153,10 @@ class CustomerProfile(BaseModel):
     customer_id: str
     name: str
     features: dict
-    income: Optional[IncomeEstimate] = None
-    repayment: Optional[RepaymentCapacity] = None
-    intent: Optional[BorrowingIntent] = None
-    risk: Optional[RiskAssessment] = None
-    lead: Optional[LeadScore] = None
-    recommendation: Optional[Recommendation] = None
+    income: IncomeEstimate | None = None
+    repayment: RepaymentCapacity | None = None
+    intent: BorrowingIntent | None = None
+    risk: RiskAssessment | None = None
+    lead: LeadScore | None = None
+    recommendation: Recommendation | None = None
     updated_at: str = Field(default_factory=lambda: datetime.utcnow().isoformat())

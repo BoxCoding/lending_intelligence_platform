@@ -7,6 +7,7 @@ drift report; wire this into a cron/Cloud Scheduler in production.
 Usage:
     python drift_detection.py
 """
+
 import json
 import sys
 from pathlib import Path
@@ -38,15 +39,21 @@ def main():
         base = baseline[name]
         std = base["std"] or 1e-9
         z = abs(live_mean - base["mean"]) / std
-        entry = {"feature": name, "baseline_mean": base["mean"],
-                 "live_mean": round(live_mean, 4), "z": round(z, 2)}
+        entry = {
+            "feature": name,
+            "baseline_mean": base["mean"],
+            "live_mean": round(live_mean, 4),
+            "z": round(z, 2),
+        }
         (report["drifted"] if z > DRIFT_Z_THRESHOLD else report["ok"]).append(entry)
 
     out = Path(__file__).parent / "models" / "drift_report.json"
     out.write_text(json.dumps(report, indent=2))
     print(f"Drift check: {len(report['drifted'])} drifted / {len(FEATURE_NAMES)} features -> {out}")
     for d in report["drifted"]:
-        print(f"  DRIFT {d['feature']}: baseline {d['baseline_mean']} vs live {d['live_mean']} (z={d['z']})")
+        print(
+            f"  DRIFT {d['feature']}: baseline {d['baseline_mean']} vs live {d['live_mean']} (z={d['z']})"
+        )
 
 
 if __name__ == "__main__":

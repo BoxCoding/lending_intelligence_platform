@@ -9,6 +9,7 @@ train and evaluate the ML models.
 Usage:
     python data_generator.py --n 400 --out ../data/samples
 """
+
 import argparse
 import json
 import random
@@ -19,21 +20,65 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "backend"))
 
-FIRST = ["Aarav", "Vivaan", "Aditya", "Ananya", "Diya", "Ishaan", "Kavya", "Rohan",
-         "Priya", "Arjun", "Sneha", "Karthik", "Meera", "Rahul", "Nisha", "Vikram",
-         "Pooja", "Sanjay", "Divya", "Amit"]
-LAST = ["Sharma", "Verma", "Iyer", "Nair", "Patel", "Reddy", "Gupta", "Singh",
-        "Das", "Kulkarni", "Menon", "Chopra", "Joshi", "Rao", "Mehta"]
-EMPLOYERS = ["Infosys Ltd", "TCS", "Wipro", "HDFC Bank", "Accenture", "Flipkart",
-             "Reliance Ind", "Cognizant", "Zoho Corp", "Airtel"]
+FIRST = [
+    "Aarav",
+    "Vivaan",
+    "Aditya",
+    "Ananya",
+    "Diya",
+    "Ishaan",
+    "Kavya",
+    "Rohan",
+    "Priya",
+    "Arjun",
+    "Sneha",
+    "Karthik",
+    "Meera",
+    "Rahul",
+    "Nisha",
+    "Vikram",
+    "Pooja",
+    "Sanjay",
+    "Divya",
+    "Amit",
+]
+LAST = [
+    "Sharma",
+    "Verma",
+    "Iyer",
+    "Nair",
+    "Patel",
+    "Reddy",
+    "Gupta",
+    "Singh",
+    "Das",
+    "Kulkarni",
+    "Menon",
+    "Chopra",
+    "Joshi",
+    "Rao",
+    "Mehta",
+]
+EMPLOYERS = [
+    "Infosys Ltd",
+    "TCS",
+    "Wipro",
+    "HDFC Bank",
+    "Accenture",
+    "Flipkart",
+    "Reliance Ind",
+    "Cognizant",
+    "Zoho Corp",
+    "Airtel",
+]
 
 PERSONAS = {
     #                weight, income_range,     vol,   emi_r,  save_r, cash_r, default_base, intent_base
-    "salaried_stable":    (0.30, (45_000, 180_000), 0.05, 0.15, 0.25, 0.05, 0.02, 0.25),
-    "salaried_stretched": (0.25, (30_000, 90_000),  0.10, 0.45, 0.02, 0.15, 0.15, 0.45),
-    "self_employed":      (0.20, (40_000, 250_000), 0.45, 0.20, 0.15, 0.35, 0.08, 0.35),
-    "gig_worker":         (0.15, (18_000, 55_000),  0.60, 0.10, 0.03, 0.40, 0.20, 0.30),
-    "affluent":           (0.10, (150_000, 600_000),0.10, 0.10, 0.35, 0.02, 0.01, 0.30),
+    "salaried_stable": (0.30, (45_000, 180_000), 0.05, 0.15, 0.25, 0.05, 0.02, 0.25),
+    "salaried_stretched": (0.25, (30_000, 90_000), 0.10, 0.45, 0.02, 0.15, 0.15, 0.45),
+    "self_employed": (0.20, (40_000, 250_000), 0.45, 0.20, 0.15, 0.35, 0.08, 0.35),
+    "gig_worker": (0.15, (18_000, 55_000), 0.60, 0.10, 0.03, 0.40, 0.20, 0.30),
+    "affluent": (0.10, (150_000, 600_000), 0.10, 0.10, 0.35, 0.02, 0.01, 0.30),
 }
 
 
@@ -82,8 +127,16 @@ def generate_customer(idx: int, rng: random.Random, months: int = 6) -> tuple[di
         if salaried:
             if rng.random() > 0.03:  # occasional missed month for stretched personas
                 balance += month_income
-                txns.append(_txn(month_start + timedelta(days=rng.randint(0, 2)), month_income,
-                                 "CREDIT", "NEFT", f"SALARY {employer.upper()} SAL CR", balance))
+                txns.append(
+                    _txn(
+                        month_start + timedelta(days=rng.randint(0, 2)),
+                        month_income,
+                        "CREDIT",
+                        "NEFT",
+                        f"SALARY {employer.upper()} SAL CR",
+                        balance,
+                    )
+                )
         else:
             # business/gig inflows: many small credits, some cash deposits
             n_credits = rng.randint(6, 18)
@@ -91,72 +144,185 @@ def generate_customer(idx: int, rng: random.Random, months: int = 6) -> tuple[di
                 amt = month_income / n_credits * rng.uniform(0.5, 1.6)
                 balance += amt
                 if rng.random() < cash_ratio:
-                    txns.append(_txn(month_start + timedelta(days=rng.randint(0, 27)), amt,
-                                     "CREDIT", "CASH", "CASH DEP CDM BRANCH", balance))
+                    txns.append(
+                        _txn(
+                            month_start + timedelta(days=rng.randint(0, 27)),
+                            amt,
+                            "CREDIT",
+                            "CASH",
+                            "CASH DEP CDM BRANCH",
+                            balance,
+                        )
+                    )
                 else:
-                    txns.append(_txn(month_start + timedelta(days=rng.randint(0, 27)), amt,
-                                     "CREDIT", "UPI", f"UPI/CR/{rng.randint(10**9, 10**10)}/PAYMENT RECD", balance))
+                    txns.append(
+                        _txn(
+                            month_start + timedelta(days=rng.randint(0, 27)),
+                            amt,
+                            "CREDIT",
+                            "UPI",
+                            f"UPI/CR/{rng.randint(10**9, 10**10)}/PAYMENT RECD",
+                            balance,
+                        )
+                    )
 
         # Fixed obligations
         if emi_amt > 500:
             balance -= emi_amt
-            txns.append(_txn(month_start + timedelta(days=5), emi_amt, "DEBIT", "ECS",
-                             "ACH D- BAJAJ FIN EMI", balance))
+            txns.append(
+                _txn(
+                    month_start + timedelta(days=5),
+                    emi_amt,
+                    "DEBIT",
+                    "ECS",
+                    "ACH D- BAJAJ FIN EMI",
+                    balance,
+                )
+            )
         if rent_amt > 0:
             balance -= rent_amt
-            txns.append(_txn(month_start + timedelta(days=3), rent_amt, "DEBIT", "UPI",
-                             "UPI/DR/RENT TO LANDLORD", balance))
+            txns.append(
+                _txn(
+                    month_start + timedelta(days=3),
+                    rent_amt,
+                    "DEBIT",
+                    "UPI",
+                    "UPI/DR/RENT TO LANDLORD",
+                    balance,
+                )
+            )
         if sip_amt > 500:
             balance -= sip_amt
-            txns.append(_txn(month_start + timedelta(days=7), sip_amt, "DEBIT", "ECS",
-                             "SIP ZERODHA MUTUAL FUND", balance))
-        for narr, frac in [("ELECTRICITY BESCOM BILL", 0.015), ("JIO RECHARGE", 0.005),
-                           ("HDFC LIFE INSURANCE PREMIUM", 0.02)]:
+            txns.append(
+                _txn(
+                    month_start + timedelta(days=7),
+                    sip_amt,
+                    "DEBIT",
+                    "ECS",
+                    "SIP ZERODHA MUTUAL FUND",
+                    balance,
+                )
+            )
+        for narr, frac in [
+            ("ELECTRICITY BESCOM BILL", 0.015),
+            ("JIO RECHARGE", 0.005),
+            ("HDFC LIFE INSURANCE PREMIUM", 0.02),
+        ]:
             amt = income * frac * rng.uniform(0.6, 1.4)
             balance -= amt
-            txns.append(_txn(month_start + timedelta(days=rng.randint(8, 12)), amt, "DEBIT", "UPI", narr, balance))
+            txns.append(
+                _txn(
+                    month_start + timedelta(days=rng.randint(8, 12)),
+                    amt,
+                    "DEBIT",
+                    "UPI",
+                    narr,
+                    balance,
+                )
+            )
 
         # Variable spends
         n_spends = rng.randint(12, 30)
-        spend_budget = month_income * rng.uniform(0.25, 0.55) * (1 + (0.3 if persona == "salaried_stretched" else 0))
+        spend_budget = (
+            month_income
+            * rng.uniform(0.25, 0.55)
+            * (1 + (0.3 if persona == "salaried_stretched" else 0))
+        )
         for _ in range(n_spends):
             amt = spend_budget / n_spends * rng.uniform(0.3, 2.0)
-            narr = rng.choice(["UPI/DR/SWIGGY", "UPI/DR/AMAZON PAY", "UPI/DR/ZOMATO",
-                               "UPI/DR/BIGBASKET", "CARD PMT FLIPKART", "UPI/DR/UBER",
-                               "PETROL HPCL", "UPI/DR/GROCERY STORE"])
+            narr = rng.choice(
+                [
+                    "UPI/DR/SWIGGY",
+                    "UPI/DR/AMAZON PAY",
+                    "UPI/DR/ZOMATO",
+                    "UPI/DR/BIGBASKET",
+                    "CARD PMT FLIPKART",
+                    "UPI/DR/UBER",
+                    "PETROL HPCL",
+                    "UPI/DR/GROCERY STORE",
+                ]
+            )
             balance -= amt
-            txns.append(_txn(month_start + timedelta(days=rng.randint(0, 27)), amt, "DEBIT",
-                             "UPI" if "UPI" in narr else "CARD", narr, balance))
+            txns.append(
+                _txn(
+                    month_start + timedelta(days=rng.randint(0, 27)),
+                    amt,
+                    "DEBIT",
+                    "UPI" if "UPI" in narr else "CARD",
+                    narr,
+                    balance,
+                )
+            )
 
         # Cash withdrawals
         for _ in range(rng.randint(0, 3)):
             amt = income * cash_ratio * rng.uniform(0.05, 0.25)
             if amt > 100:
                 balance -= amt
-                txns.append(_txn(month_start + timedelta(days=rng.randint(0, 27)), amt,
-                                 "DEBIT", "ATM", "ATM CASH WDL", balance))
+                txns.append(
+                    _txn(
+                        month_start + timedelta(days=rng.randint(0, 27)),
+                        amt,
+                        "DEBIT",
+                        "ATM",
+                        "ATM CASH WDL",
+                        balance,
+                    )
+                )
 
         # Life-event signals concentrated in recent months
         if m >= months - 3:
             if has_property and rng.random() < 0.5:
                 amt = income * rng.uniform(1.5, 4.0)
                 balance -= amt
-                txns.append(_txn(month_start + timedelta(days=15), amt, "DEBIT", "NEFT",
-                                 "NEFT PRESTIGE BUILDER TOKEN ADVANCE PROPERTY", balance))
+                txns.append(
+                    _txn(
+                        month_start + timedelta(days=15),
+                        amt,
+                        "DEBIT",
+                        "NEFT",
+                        "NEFT PRESTIGE BUILDER TOKEN ADVANCE PROPERTY",
+                        balance,
+                    )
+                )
             if has_vehicle and rng.random() < 0.5:
                 amt = income * rng.uniform(0.4, 1.2)
                 balance -= amt
-                txns.append(_txn(month_start + timedelta(days=18), amt, "DEBIT", "CARD",
-                                 "ADVANCE MARUTI SHOWROOM VEHICLE BOOKING", balance))
+                txns.append(
+                    _txn(
+                        month_start + timedelta(days=18),
+                        amt,
+                        "DEBIT",
+                        "CARD",
+                        "ADVANCE MARUTI SHOWROOM VEHICLE BOOKING",
+                        balance,
+                    )
+                )
             if has_wedding and rng.random() < 0.6:
                 amt = income * rng.uniform(0.3, 1.0)
                 balance -= amt
-                txns.append(_txn(month_start + timedelta(days=20), amt, "DEBIT", "CARD",
-                                 "TANISHQ JEWELLERY PURCHASE", balance))
+                txns.append(
+                    _txn(
+                        month_start + timedelta(days=20),
+                        amt,
+                        "DEBIT",
+                        "CARD",
+                        "TANISHQ JEWELLERY PURCHASE",
+                        balance,
+                    )
+                )
             if has_enquiry and rng.random() < 0.6:
                 balance -= 500
-                txns.append(_txn(month_start + timedelta(days=10), 500, "DEBIT", "UPI",
-                                 "CIBIL CREDIT REPORT FEE", balance))
+                txns.append(
+                    _txn(
+                        month_start + timedelta(days=10),
+                        500,
+                        "DEBIT",
+                        "UPI",
+                        "CIBIL CREDIT REPORT FEE",
+                        balance,
+                    )
+                )
 
     payload = {
         "customer_id": customer_id,
@@ -164,17 +330,27 @@ def generate_customer(idx: int, rng: random.Random, months: int = 6) -> tuple[di
         "pan": f"ABCDE{rng.randint(1000, 9999)}F",
         "consent_id": uuid.uuid4().hex,
         "fetched_at": date.today().isoformat(),
-        "accounts": [{
-            "account_id": f"ACC{idx:07d}",
-            "fip_name": rng.choice(["HDFC Bank", "ICICI Bank", "SBI", "Axis Bank", "Kotak Bank"]),
-            "account_type": "SAVINGS",
-            "transactions": sorted(txns, key=lambda t: t["date"]),
-        }],
+        "accounts": [
+            {
+                "account_id": f"ACC{idx:07d}",
+                "fip_name": rng.choice(
+                    ["HDFC Bank", "ICICI Bank", "SBI", "Axis Bank", "Kotak Bank"]
+                ),
+                "account_type": "SAVINGS",
+                "transactions": sorted(txns, key=lambda t: t["date"]),
+            }
+        ],
     }
 
     # ---- Ground-truth labels ----
-    intent_p = intent_base + 0.25 * has_property + 0.20 * has_vehicle + 0.15 * has_wedding \
-        + 0.20 * has_enquiry + 0.05 * salary_grew
+    intent_p = (
+        intent_base
+        + 0.25 * has_property
+        + 0.20 * has_vehicle
+        + 0.15 * has_wedding
+        + 0.20 * has_enquiry
+        + 0.05 * salary_grew
+    )
     applied_90d = rng.random() < min(intent_p, 0.95)
     foir = (emi_amt + rent_amt) / income
     pd_p = pd_base + 0.20 * max(foir - 0.45, 0) + 0.10 * vol - 0.05 * save_ratio
