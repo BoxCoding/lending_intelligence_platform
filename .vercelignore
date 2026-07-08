@@ -1,0 +1,22 @@
+# Repo-root ignore — applies when `vercel` is invoked from the repo root.
+# The backend virtualenv is ~600MB and MUST NOT be uploaded/bundled; Vercel
+# installs its own deps from requirements.txt. (Also covered by .gitignore,
+# so git-based deploys exclude it automatically.)
+backend/.venv
+backend/.venv/**
+**/.venv
+**/.venv/**
+.venv
+.venv/**
+node_modules
+**/node_modules/**
+.next
+frontend/.next/**
+.git
+**/__pycache__/**
+*.pyc
+**/.pytest_cache/**
+**/.ruff_cache/**
+.coverage
+backend/secrets/**
+backend/data/store/**

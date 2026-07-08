@@ -121,12 +121,23 @@ repo, for reference:
   into the installed set. It must not appear in `backend/requirements.txt` —
   that is the file Vercel's builder reads. The training-only extras live in
   `backend/requirements-dev.txt`, which Vercel does not install.
-- **`Total bundle size (NNN MB) exceeds the maximum function size`** → the
-  local `backend/.venv` (~700MB) got bundled. Two things prevent this and both
-  are in the repo now: `vercel.json` uses the modern `functions` config (not
-  `builds`, which bundles the whole directory), and `.vercelignore` excludes
-  `.venv`. If it still recurs, you're deploying via the CLI from a working
-  copy where those aren't taking effect — **deploy via git push instead**,
-  where `.venv` is git-ignored and simply isn't there. The trimmed deps alone
-  are ~250MB on Linux (scipy is the biggest at ~130MB), comfortably under the
-  limit.
+- **`Total bundle size (~810 MB) exceeds the maximum function size (500 MB)`**
+  → your local `backend/.venv` (~600MB) is being uploaded and bundled. This
+  happens **only when you deploy with the `vercel` CLI from your machine** —
+  the CLI uploads your working directory. It does NOT happen on a git-based
+  deploy: `.venv` is git-ignored, so the git tree of `backend/` is just 1.5MB.
+  Measured math: your `.venv` (~608MB) + Vercel's own fresh install
+  (~200MB) ≈ 810MB. The dependencies themselves are only ~258MB on Linux
+  (numpy 57 + scipy 116 + xgboost 15 + lightgbm 10 + the rest), so a clean
+  deploy lands around 260MB.
+
+  **Fix — deploy from git, not the CLI:**
+  1. `git add -A && git commit -m "vercel config" && git push`
+  2. In the Vercel backend project, make sure it's connected to the GitHub
+     repo (Settings → Git) with **Root Directory = `backend`**.
+  3. The push triggers the build. Do **not** run `vercel --prod` from your
+     terminal — that re-uploads the local `.venv`.
+
+  If you must use the CLI, delete the venv first (`rm -rf backend/.venv`,
+  recreate later with `requirements-dev.txt`) or run it from a fresh
+  `git clone` that has no `.venv`.
