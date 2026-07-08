@@ -1,13 +1,8 @@
 {
-  "builds": [
-    {
-      "src": "api/index.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "250mb",
-        "includeFiles": "ml_models/**"
-      }
+  "functions": {
+    "api/index.py": {
+      "includeFiles": "ml_models/**"
     }
-  ],
-  "routes": [{ "src": "/(.*)", "dest": "api/index.py" }]
+  },
+  "rewrites": [{ "source": "/(.*)", "destination": "/api/index.py" }]
 }

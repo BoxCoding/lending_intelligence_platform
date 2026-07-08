@@ -1,12 +1,21 @@
-.venv/
-secrets/
-tests/
-scripts/
-data/
+# Keep the deployment upload small. The local virtualenv (.venv) is the big
+# one — ~700MB of the full ML stack that must NOT be bundled into the function;
+# Vercel installs its own deps from requirements.txt.
+.venv
+.venv/**
+**/.venv/**
+.vercel
+secrets/**
+tests/**
+scripts/**
+data/**
 .env
 .env.example
-__pycache__/
+requirements-dev.txt
+__pycache__/**
+**/__pycache__/**
 *.pyc
-.pytest_cache/
-htmlcov/
+.pytest_cache/**
+.ruff_cache/**
+htmlcov/**
 .coverage
