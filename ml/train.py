@@ -155,7 +155,12 @@ def main():
         ("risk", train_risk, y_default),
     ]:
         model, metrics = trainer(X[idx_tr], X[idx_te], y[idx_tr], y[idx_te])
-        joblib.dump(model, out_dir / f"{name}_model.joblib")
+        # Save the native Booster, not the sklearn wrapper: predictions are
+        # identical, but it drops scikit-learn (+scipy) as a hard runtime
+        # dependency — the difference between fitting under a serverless
+        # function's size limit or not. See docs/DEPLOYMENT.md.
+        booster = model.get_booster() if hasattr(model, "get_booster") else model.booster_
+        joblib.dump(booster, out_dir / f"{name}_model.joblib")
         metrics_registry["models"][name] = metrics
         print(f"  {name:>7}: {metrics}")
 

@@ -70,19 +70,23 @@ Optional: set `GEMINI_API_KEY` in `backend/.env` for live Gemini answers.
 (gitignored) and set `GOOGLE_APPLICATION_CREDENTIALS`/`FIRESTORE_PROJECT_ID` in
 `backend/.env` — without credentials the app falls back to a local JSON store.
 Hosted platforms use `FIREBASE_CREDENTIALS_JSON` (inline) instead; see
-[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for the full Vercel + Render walkthrough.
+[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for the full Vercel walkthrough.
 
-### Docker
+### Docker (local dev only)
 
 ```bash
 docker compose -f docker/docker-compose.yml up --build
 ```
 
-### Deploy
+### Deploy — both backend and frontend on Vercel (two separate projects)
 
-- Backend → Render: `deployment/render.yaml`
-- Frontend → Vercel: `deployment/vercel.json`
-- Helper: `deployment/deploy.sh [local|render|vercel]`
+- Backend → `backend/vercel.json` + `backend/api/index.py`; installs from
+  `backend/api/requirements.txt`, a trimmed dependency set (~187MB — native
+  LightGBM/XGBoost Boosters instead of sklearn, Firestore over REST instead
+  of the grpc SDK, SHAP dropped with a graceful fallback) that fits Vercel's
+  serverless function size limit.
+- Frontend → `deployment/vercel.json`
+- Helper: `deployment/deploy.sh [local|backend|frontend]`
 
 ## Repository layout
 
@@ -93,7 +97,7 @@ agents/     LangGraph underwriting-assistant workflow
 frontend/   Next.js 15 + Tailwind + React Query + Recharts (dark theme)
 database/   PostgreSQL DDL + Firestore collection design
 docker/     Dockerfiles + compose
-deployment/ Render/Vercel/deploy.sh
+deployment/ Vercel (frontend) config + deploy.sh
 docs/       Architecture (mermaid diagrams), API reference
 data/       synthetic AA payloads + labels + sample payload
 ```

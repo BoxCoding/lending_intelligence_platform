@@ -1,0 +1,197 @@
+{
+  "trained_at": "2026-07-04T18:11:08.743131+00:00",
+  "n_train": 300,
+  "n_test": 100,
+  "features": [
+    "avg_monthly_salary",
+    "avg_monthly_income",
+    "income_volatility",
+    "salary_regularity",
+    "avg_monthly_debits",
+    "fixed_expense",
+    "variable_expense",
+    "avg_balance",
+    "min_balance_ratio",
+    "savings_rate",
+    "emi_outflow",
+    "existing_debt_ratio",
+    "credit_card_spend",
+    "cash_withdrawal_ratio",
+    "cash_deposit_ratio",
+    "upi_txn_share",
+    "investment_rate",
+    "insurance_spend",
+    "utilities_spend",
+    "shopping_spend",
+    "discretionary_ratio",
+    "rent_outflow",
+    "salary_growth_rate",
+    "balance_trend",
+    "property_payment_flag",
+    "vehicle_payment_flag",
+    "education_payment_flag",
+    "wedding_expense_flag",
+    "loan_enquiry_count",
+    "high_value_purchase_count",
+    "savings_growth_rate",
+    "months_observed",
+    "txn_count_monthly",
+    "bounce_indicator"
+  ],
+  "models": {
+    "income": {
+      "rmse": 19467.35,
+      "mae": 8750.5,
+      "mape": 0.0697
+    },
+    "intent": {
+      "auc": 0.6206,
+      "precision": 0.6341,
+      "recall": 0.5098,
+      "f1": 0.5652
+    },
+    "risk": {
+      "roc_auc": 0.6331,
+      "ks": 0.3599,
+      "gini": 0.2661
+    }
+  },
+  "feature_baseline": {
+    "avg_monthly_salary": {
+      "mean": 81370.5902,
+      "std": 104192.5754
+    },
+    "avg_monthly_income": {
+      "mean": 81370.5902,
+      "std": 104192.5754
+    },
+    "income_volatility": {
+      "mean": 0.1037,
+      "std": 0.1526
+    },
+    "salary_regularity": {
+      "mean": 0.6613,
+      "std": 0.4524
+    },
+    "avg_monthly_debits": {
+      "mean": 127774.6944,
+      "std": 110884.7927
+    },
+    "fixed_expense": {
+      "mean": 55021.4227,
+      "std": 35414.1564
+    },
+    "variable_expense": {
+      "mean": 72753.2718,
+      "std": 87272.9982
+    },
+    "avg_balance": {
+      "mean": 191473.5881,
+      "std": 224490.2912
+    },
+    "min_balance_ratio": {
+      "mean": -0.6581,
+      "std": 19.0651
+    },
+    "savings_rate": {
+      "mean": -0.1446,
+      "std": 0.2646
+    },
+    "emi_outflow": {
+      "mean": 20159.2003,
+      "std": 12156.0536
+    },
+    "existing_debt_ratio": {
+      "mean": 0.2215,
+      "std": 0.2028
+    },
+    "credit_card_spend": {
+      "mean": 6928.8943,
+      "std": 6375.8882
+    },
+    "cash_withdrawal_ratio": {
+      "mean": 0.0136,
+      "std": 0.0154
+    },
+    "cash_deposit_ratio": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "upi_txn_share": {
+      "mean": 0.6647,
+      "std": 0.0316
+    },
+    "investment_rate": {
+      "mean": 0.0778,
+      "std": 0.0962
+    },
+    "insurance_spend": {
+      "mean": 2241.8175,
+      "std": 1985.1117
+    },
+    "utilities_spend": {
+      "mean": 2237.5638,
+      "std": 1964.3764
+    },
+    "shopping_spend": {
+      "mean": 13739.358,
+      "std": 11864.0361
+    },
+    "discretionary_ratio": {
+      "mean": 0.2748,
+      "std": 0.1967
+    },
+    "rent_outflow": {
+      "mean": 10223.6408,
+      "std": 15790.9676
+    },
+    "salary_growth_rate": {
+      "mean": 0.0051,
+      "std": 0.0477
+    },
+    "balance_trend": {
+      "mean": -0.1351,
+      "std": 0.3001
+    },
+    "property_payment_flag": {
+      "mean": 0.1375,
+      "std": 0.3444
+    },
+    "vehicle_payment_flag": {
+      "mean": 0.1425,
+      "std": 0.3496
+    },
+    "education_payment_flag": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "wedding_expense_flag": {
+      "mean": 0.1,
+      "std": 0.3
+    },
+    "loan_enquiry_count": {
+      "mean": 0.43,
+      "std": 0.9056
+    },
+    "high_value_purchase_count": {
+      "mean": 0.4725,
+      "std": 0.8656
+    },
+    "savings_growth_rate": {
+      "mean": -0.0314,
+      "std": 0.2805
+    },
+    "months_observed": {
+      "mean": 6.0,
+      "std": 0.0
+    },
+    "txn_count_monthly": {
+      "mean": 32.5596,
+      "std": 5.834
+    },
+    "bounce_indicator": {
+      "mean": 0.355,
+      "std": 0.4785
+    }
+  }
+}

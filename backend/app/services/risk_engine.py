@@ -20,7 +20,9 @@ def assess_risk(features: dict[str, float]) -> RiskAssessment:
     model = registry.get("risk")
     if model is not None:
         try:
-            ml_pd = float(model.predict_proba([to_vector(features)])[0][1])
+            # model is a native lightgbm.Booster (see ml/train.py): predict()
+            # on a binary-objective booster returns P(class=1) directly.
+            ml_pd = float(model.predict([to_vector(features)])[0])
         except Exception as exc:
             logger.warning("Risk model inference failed, using scorecard: %s", exc)
 

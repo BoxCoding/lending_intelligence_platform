@@ -5,13 +5,15 @@ pydantic-settings>=2.4
 python-multipart>=0.0.9
 joblib>=1.4
 numpy>=1.26
-pandas>=2.2
-scikit-learn>=1.5
 xgboost>=2.1
 lightgbm>=4.5
-shap>=0.46
+google-auth>=2.30
+requests>=2.31
 # Optional integrations (safe to omit for offline demo)
 google-genai>=1.0 ; python_version >= "3.10"
-google-cloud-firestore>=2.16
 langgraph>=0.2
 langchain-core>=0.3
+# Training-only (ml/train.py) and full local explainability; NOT installed
+# for the size-constrained Vercel deploy — see requirements-vercel.txt
+scikit-learn>=1.5
+shap>=0.46

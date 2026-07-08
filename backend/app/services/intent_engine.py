@@ -32,7 +32,12 @@ def predict_intent(features: dict[str, float]) -> BorrowingIntent:
     model = registry.get("intent")
     if model is not None:
         try:
-            ml_prob = float(model.predict_proba([to_vector(features)])[0][1])
+            # model is a native xgboost.Booster (see ml/train.py): needs a
+            # DMatrix input; predict() on a binary-objective booster returns
+            # P(class=1) directly, no predict_proba()/column indexing needed.
+            import xgboost as xgb
+
+            ml_prob = float(model.predict(xgb.DMatrix([to_vector(features)]))[0])
         except Exception as exc:
             logger.warning("Intent model inference failed, using rules: %s", exc)
 
