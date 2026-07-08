@@ -1,3 +1,9 @@
+# Runtime dependencies — used by the deployed app (Vercel + Docker) AND local
+# dev. Deliberately excludes scikit-learn/scipy and shap: the app serves native
+# LightGBM/XGBoost Boosters (no sklearn needed) and falls back gracefully when
+# shap is absent. This keeps the Vercel serverless bundle ~187MB, under the
+# ~250MB limit. For training (ml/train.py) or real SHAP locally, install
+# requirements-dev.txt instead. See docs/DEPLOYMENT.md.
 fastapi>=0.115
 uvicorn[standard]>=0.30
 pydantic>=2.8
@@ -9,11 +15,3 @@ xgboost>=2.1
 lightgbm>=4.5
 google-auth>=2.30
 requests>=2.31
-# Optional integrations (safe to omit for offline demo)
-google-genai>=1.0 ; python_version >= "3.10"
-langgraph>=0.2
-langchain-core>=0.3
-# Training-only (ml/train.py) and full local explainability; NOT installed
-# for the size-constrained Vercel deploy — see requirements-vercel.txt
-scikit-learn>=1.5
-shap>=0.46

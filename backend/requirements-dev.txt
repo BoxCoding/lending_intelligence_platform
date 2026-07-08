@@ -1,0 +1,11 @@
+# Full local / training dependencies. NOT installed on Vercel — scikit-learn
+# +scipy (~145MB) and shap's numba/llvmlite chain (llvmlite has no Python 3.12
+# wheel and fails to build there) blow past the serverless size limit. The
+# deployed app needs neither: it serves native Boosters and the SHAP call
+# degrades to a deterministic fallback. See docs/DEPLOYMENT.md.
+-r requirements.txt
+scikit-learn>=1.5        # ml/train.py: train_test_split + evaluation metrics
+shap>=0.46               # richer SHAP explanations (API falls back without it)
+google-genai>=1.0        # live Gemini advisor (offline fallback otherwise)
+langgraph>=0.2           # agents/loan_advisor_graph.py (standalone demo)
+langchain-core>=0.3

@@ -18,9 +18,9 @@ this deployment:
 - Talks to Firestore over its **plain REST API** (`google-auth` + `requests`)
   instead of the official SDK, which pulls in ~40MB of grpc/protobuf.
 
-Result: **~187MB** installed — see `backend/api/requirements.txt` for the
-exact trimmed set (the full `backend/requirements.txt`, with scikit-learn and
-SHAP, is still what local dev / `ml/train.py` uses).
+Result: **~187MB** installed — `backend/requirements.txt` is the trimmed
+runtime set (what Vercel installs). `backend/requirements-dev.txt` adds
+scikit-learn + SHAP for training (`ml/train.py`) and full local dev.
 
 ## 0. One-time prerequisites
 
@@ -66,8 +66,9 @@ vercel --prod
 
 Vercel auto-detects `backend/vercel.json` (routes every path to
 `api/index.py`, which imports the real FastAPI `app`) and installs from
-`backend/api/requirements.txt` (the trimmed set — Vercel's Python builder
-looks for `requirements.txt` next to the entrypoint file first).
+`backend/requirements.txt` — the trimmed runtime set. The trained model
+files under `backend/ml_models/` are force-bundled into the function via the
+`includeFiles` key in `vercel.json`.
 
 Note the URL it gives you, e.g. `https://lendiq-api.vercel.app`.
 
@@ -118,6 +119,8 @@ Paste the build log. Two failure modes we've already hit and fixed on this
 repo, for reference:
 - **"Root Directory not found" / dies right after cloning** → Root Directory
   isn't set to `backend` in the Vercel project settings.
-- **`numba` / `Cannot install on Python version 3.12`** → an old dependency
-  resolved by Vercel's build; this shouldn't recur since SHAP (which pulled
-  numba in) is no longer in `backend/api/requirements.txt`.
+- **`llvmlite` / `numba` / `Cannot install on Python version 3.12`** → SHAP
+  (which pulls in numba → llvmlite, and llvmlite has no 3.12 wheel) leaked
+  into the installed set. It must not appear in `backend/requirements.txt` —
+  that is the file Vercel's builder reads. The training-only extras live in
+  `backend/requirements-dev.txt`, which Vercel does not install.

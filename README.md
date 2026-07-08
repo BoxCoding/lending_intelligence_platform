@@ -81,7 +81,7 @@ docker compose -f docker/docker-compose.yml up --build
 ### Deploy — both backend and frontend on Vercel (two separate projects)
 
 - Backend → `backend/vercel.json` + `backend/api/index.py`; installs from
-  `backend/api/requirements.txt`, a trimmed dependency set (~187MB — native
+  `backend/requirements.txt`, a trimmed dependency set (~187MB — native
   LightGBM/XGBoost Boosters instead of sklearn, Firestore over REST instead
   of the grpc SDK, SHAP dropped with a graceful fallback) that fits Vercel's
   serverless function size limit.

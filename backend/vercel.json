@@ -3,7 +3,10 @@
     {
       "src": "api/index.py",
       "use": "@vercel/python",
-      "config": { "maxLambdaSize": "250mb" }
+      "config": {
+        "maxLambdaSize": "250mb",
+        "includeFiles": "ml_models/**"
+      }
     }
   ],
   "routes": [{ "src": "/(.*)", "dest": "api/index.py" }]
